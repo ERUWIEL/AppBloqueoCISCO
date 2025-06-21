@@ -1,0 +1,22 @@
+# Archivos compilados
+/target/
+/bin/
+/build/
+/.vscode/
+*.class
+*.jar
+*.war
+*.ear
+#archivos generados por maven
+/pom.xml.tag
+/pom.xml.releaseBackup
+/pom.xml.versionsBackup
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db"/target/" 
+"/.vscode/" 
+"*.class" 
+# Archivos Generados Por NeatBeans
+/.metadata/
+/nbproject/private/
