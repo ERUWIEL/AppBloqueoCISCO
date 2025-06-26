@@ -2,8 +2,8 @@ package presentacion;
 
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
-import presentacion.vistas.pnlBloqueo;
-
+import presentacion.vistas.VentanaBloqueo;
+ 
 /**
  *
  * @author erwbyel
@@ -36,7 +36,9 @@ public class Controlador extends JFrame {
      * @param frame 
      */
     public static void mostrarBloqueo(JFrame frame) {
-        frame.setContentPane(new pnlBloqueo());
+        VentanaBloqueo ventana = new VentanaBloqueo();
+        //ventana.setReservacion("Erubiel");
+        frame.setContentPane(ventana);
         frame.revalidate();
     }
 }
