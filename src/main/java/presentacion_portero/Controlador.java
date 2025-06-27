@@ -2,7 +2,10 @@ package presentacion_portero;
 
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+import presentacion_portero.vistas.VentanaBienvenida;
 import presentacion_portero.vistas.VentanaIlegal;
+import presentacion_portero.vistas.VentanaConfirmacionIdentidad;
+import presentacion_portero.vistas.VentanaSeleccionComputadora;
 
 /**
  * control que permite organizar las ventanas del portero
@@ -17,7 +20,8 @@ public class Controlador extends JFrame {
         // TODO code application logic here
         SwingUtilities.invokeLater(() -> {
             Controlador control = new Controlador();
-            mostrarVentanaIlegal(control);
+            mostrarVentanaSeleccion(control);
+            //mostrarVentanaBienvenida(control);
             control.setVisible(true);
         });
     }
@@ -32,6 +36,48 @@ public class Controlador extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
     }
+    
+    // Inicio del proceso de recervacion
+    
+    /**
+     * metodo que muestra la ventana inicial para reservar
+     * @param frame 
+     */
+    public static void mostrarVentanaBienvenida(JFrame frame){
+        VentanaBienvenida ventana = new VentanaBienvenida(frame);
+        frame.setContentPane(ventana);
+        frame.revalidate();
+    }
+    
+    /**
+     * metodo que muestra la ventana para elaborar una reservacion
+     * @param frame
+     */
+    public static void mostrarVentanaIdentidad(JFrame frame){
+        VentanaConfirmacionIdentidad ventana = new VentanaConfirmacionIdentidad(frame);
+        frame.setContentPane(ventana);
+        frame.revalidate();
+    }
+    
+    /**
+     * metodo que muestra la ventana para seleccionar la computadora deseada
+     * @param frame 
+     */
+    public static void mostrarVentanaSeleccion(JFrame frame){
+        VentanaSeleccionComputadora ventana = new VentanaSeleccionComputadora(frame);
+        frame.setContentPane(ventana);
+        frame.revalidate();
+    }
+    
+    /**
+     * metodo que muestra la ventana de confirmacion de recervacion
+     * @param frame 
+     */
+    public static void mostrarVentanaConfirmacion(JFrame frame){
+    
+    }
+    
+    // fin del proceso de recervacion
     
     /**
      * metodo que muestra la ventana a una computadora no registrada

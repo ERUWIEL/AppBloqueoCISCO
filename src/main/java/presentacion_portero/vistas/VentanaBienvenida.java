@@ -1,20 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package presentacion_portero.vistas;
+
+import javax.swing.JFrame;
 
 /**
  *
  * @author angel
  */
 public class VentanaBienvenida extends javax.swing.JPanel {
-
+    private JFrame frame;
     /**
      * Creates new form VentanaBienvenida
+     * @param frame
      */
-    public VentanaBienvenida() {
+    public VentanaBienvenida(JFrame frame) {
         initComponents();
+        this.frame = frame;
     }
 
     /**
@@ -26,19 +27,154 @@ public class VentanaBienvenida extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        pnlLogin = new javax.swing.JPanel();
+        lblMensaje = new javax.swing.JLabel();
+        lblId = new javax.swing.JLabel();
+        txfId = new javax.swing.JTextField();
+        btnBuscarEquipo = new presentacion_portero.componentes.PanelRound();
+        lblBuscarEquipo = new javax.swing.JLabel();
+        pnlImagen = new javax.swing.JPanel();
+        imgVacunacion = new javax.swing.JLabel();
+
+        setMinimumSize(new java.awt.Dimension(1440, 1024));
+        setName(""); // NOI18N
+        setPreferredSize(new java.awt.Dimension(1440, 1024));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pnlLogin.setBackground(new java.awt.Color(16, 20, 65));
+
+        lblMensaje.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+        lblMensaje.setForeground(new java.awt.Color(255, 255, 255));
+        lblMensaje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblMensaje.setText("BIENVENIDO A CISCO");
+
+        lblId.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
+        lblId.setForeground(new java.awt.Color(255, 255, 255));
+        lblId.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblId.setText("INGRESE SU ID");
+
+        txfId.setFont(new java.awt.Font("MS UI Gothic", 1, 18)); // NOI18N
+        txfId.setForeground(new java.awt.Color(153, 153, 153));
+        txfId.setText("  ingrese su id");
+
+        btnBuscarEquipo.setBackground(new java.awt.Color(25, 50, 178));
+        btnBuscarEquipo.setRoundBottomLeft(10);
+        btnBuscarEquipo.setRoundBottomRight(10);
+        btnBuscarEquipo.setRoundTopLeft(10);
+        btnBuscarEquipo.setRoundTopRight(10);
+        btnBuscarEquipo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnBuscarEquipoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnBuscarEquipoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnBuscarEquipoMouseExited(evt);
+            }
+        });
+
+        lblBuscarEquipo.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
+        lblBuscarEquipo.setForeground(new java.awt.Color(255, 255, 255));
+        lblBuscarEquipo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblBuscarEquipo.setText("buscar equipo");
+        lblBuscarEquipo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout btnBuscarEquipoLayout = new javax.swing.GroupLayout(btnBuscarEquipo);
+        btnBuscarEquipo.setLayout(btnBuscarEquipoLayout);
+        btnBuscarEquipoLayout.setHorizontalGroup(
+            btnBuscarEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblBuscarEquipo, javax.swing.GroupLayout.DEFAULT_SIZE, 395, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        btnBuscarEquipoLayout.setVerticalGroup(
+            btnBuscarEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblBuscarEquipo, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
         );
+
+        javax.swing.GroupLayout pnlLoginLayout = new javax.swing.GroupLayout(pnlLogin);
+        pnlLogin.setLayout(pnlLoginLayout);
+        pnlLoginLayout.setHorizontalGroup(
+            pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlLoginLayout.createSequentialGroup()
+                .addGap(0, 48, Short.MAX_VALUE)
+                .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblId, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(btnBuscarEquipo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txfId, javax.swing.GroupLayout.Alignment.LEADING))))
+            .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlLoginLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(lblMensaje, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        pnlLoginLayout.setVerticalGroup(
+            pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlLoginLayout.createSequentialGroup()
+                .addGap(482, 482, 482)
+                .addComponent(lblId, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txfId, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
+                .addComponent(btnBuscarEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(353, Short.MAX_VALUE))
+            .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlLoginLayout.createSequentialGroup()
+                    .addGap(215, 215, 215)
+                    .addComponent(lblMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(775, Short.MAX_VALUE)))
+        );
+
+        add(pnlLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 0, 490, 1030));
+
+        pnlImagen.setBackground(new java.awt.Color(25, 30, 69));
+
+        imgVacunacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imagenes/anuncio_vacunas (2).jpg"))); // NOI18N
+
+        javax.swing.GroupLayout pnlImagenLayout = new javax.swing.GroupLayout(pnlImagen);
+        pnlImagen.setLayout(pnlImagenLayout);
+        pnlImagenLayout.setHorizontalGroup(
+            pnlImagenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlImagenLayout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addComponent(imgVacunacion, javax.swing.GroupLayout.PREFERRED_SIZE, 902, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
+        );
+        pnlImagenLayout.setVerticalGroup(
+            pnlImagenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlImagenLayout.createSequentialGroup()
+                .addContainerGap(93, Short.MAX_VALUE)
+                .addComponent(imgVacunacion, javax.swing.GroupLayout.PREFERRED_SIZE, 910, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37))
+        );
+
+        add(pnlImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 950, 1040));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnBuscarEquipoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarEquipoMouseEntered
+        // TODO add your handling code here:
+        btnBuscarEquipo.setBackground(new java.awt.Color(4, 40, 215));
+    }//GEN-LAST:event_btnBuscarEquipoMouseEntered
+
+    private void btnBuscarEquipoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarEquipoMouseExited
+        // TODO add your handling code here:
+        btnBuscarEquipo.setBackground(new java.awt.Color(25, 50, 178));
+    }//GEN-LAST:event_btnBuscarEquipoMouseExited
+
+    private void btnBuscarEquipoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarEquipoMouseClicked
+        // TODO add your handling code here:
+        presentacion_portero.Controlador.mostrarVentanaIdentidad(frame);
+    }//GEN-LAST:event_btnBuscarEquipoMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private presentacion_portero.componentes.PanelRound btnBuscarEquipo;
+    private javax.swing.JLabel imgVacunacion;
+    private javax.swing.JLabel lblBuscarEquipo;
+    private javax.swing.JLabel lblId;
+    private javax.swing.JLabel lblMensaje;
+    private javax.swing.JPanel pnlImagen;
+    private javax.swing.JPanel pnlLogin;
+    private javax.swing.JTextField txfId;
     // End of variables declaration//GEN-END:variables
 }
