@@ -5,10 +5,12 @@ import javax.swing.SwingUtilities;
 import presentacion_portero.vistas.VentanaBienvenida;
 import presentacion_portero.vistas.VentanaIlegal;
 import presentacion_portero.vistas.VentanaConfirmacionIdentidad;
+import presentacion_portero.vistas.VentanaConfirmarSeleccion;
 import presentacion_portero.vistas.VentanaSeleccionComputadora;
 
 /**
  * control que permite organizar las ventanas del portero
+ *
  * @author erwbyel
  */
 public class Controlador extends JFrame {
@@ -20,8 +22,7 @@ public class Controlador extends JFrame {
         // TODO code application logic here
         SwingUtilities.invokeLater(() -> {
             Controlador control = new Controlador();
-            mostrarVentanaSeleccion(control);
-            //mostrarVentanaBienvenida(control);
+            mostrarVentanaBienvenida(control);
             control.setVisible(true);
         });
     }
@@ -36,63 +37,77 @@ public class Controlador extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
     }
-    
+
     // Inicio del proceso de recervacion
-    
     /**
      * metodo que muestra la ventana inicial para reservar
-     * @param frame 
-     */
-    public static void mostrarVentanaBienvenida(JFrame frame){
-        VentanaBienvenida ventana = new VentanaBienvenida(frame);
-        frame.setContentPane(ventana);
-        frame.revalidate();
-    }
-    
-    /**
-     * metodo que muestra la ventana para elaborar una reservacion
+     *
      * @param frame
      */
-    public static void mostrarVentanaIdentidad(JFrame frame){
-        VentanaConfirmacionIdentidad ventana = new VentanaConfirmacionIdentidad(frame);
-        frame.setContentPane(ventana);
-        frame.revalidate();
+    public static void mostrarVentanaBienvenida(JFrame frame) {
+        SwingUtilities.invokeLater(() -> {
+            VentanaBienvenida ventana = new VentanaBienvenida(frame);
+            frame.setContentPane(ventana);
+            frame.revalidate();
+        });
     }
-    
+
+    /**
+     * metodo que muestra la ventana para elaborar una reservacion
+     *
+     * @param frame
+     */
+    public static void mostrarVentanaIdentidad(JFrame frame) {
+        SwingUtilities.invokeLater(() -> {
+            VentanaConfirmacionIdentidad ventana = new VentanaConfirmacionIdentidad(frame);
+            frame.setContentPane(ventana);
+            frame.revalidate();
+        });
+    }
+
     /**
      * metodo que muestra la ventana para seleccionar la computadora deseada
-     * @param frame 
+     *
+     * @param frame
      */
-    public static void mostrarVentanaSeleccion(JFrame frame){
-        VentanaSeleccionComputadora ventana = new VentanaSeleccionComputadora(frame);
-        frame.setContentPane(ventana);
-        frame.revalidate();
+    public static void mostrarVentanaSeleccion(JFrame frame) {
+        SwingUtilities.invokeLater(() -> {
+            VentanaSeleccionComputadora ventana = new VentanaSeleccionComputadora(frame);
+            frame.setContentPane(ventana);
+            frame.revalidate();
+        });
     }
-    
+
     /**
      * metodo que muestra la ventana de confirmacion de recervacion
-     * @param frame 
+     *
+     * @param frame
+     * @param numComputadora
      */
-    public static void mostrarVentanaConfirmacion(JFrame frame){
-    
+    public static void mostrarVentanaConfirmacion(JFrame frame, String numComputadora) {
+        SwingUtilities.invokeLater(() -> {
+            VentanaConfirmarSeleccion ventana = new VentanaConfirmarSeleccion(frame, numComputadora);
+            frame.setContentPane(ventana);
+            frame.revalidate();
+        });
     }
-    
+
     // fin del proceso de recervacion
-    
     /**
      * metodo que muestra la ventana a una computadora no registrada
-     * @param frame 
+     *
+     * @param frame
      */
-    public static void mostrarVentanaIlegal(JFrame frame){
+    public static void mostrarVentanaIlegal(JFrame frame) {
         VentanaIlegal ventana = new VentanaIlegal();
         frame.setContentPane(ventana);
         frame.revalidate();
     }
-    
+
     /**
      * metodo que cierra el programa
      */
-    public static void cerrarPrograma(){
+    public static void cerrarPrograma() {
         System.exit(0);
     }
 }

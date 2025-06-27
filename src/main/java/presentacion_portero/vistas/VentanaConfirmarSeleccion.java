@@ -1,49 +1,25 @@
+
 package presentacion_portero.vistas;
 
-import java.awt.FlowLayout;
 import javax.swing.JFrame;
-import presentacion_portero.componentes.RegistroComputadora;
 
 /**
- * 
+ *
  * @author erwbyel
  */
-public class VentanaSeleccionComputadora extends javax.swing.JPanel {
+public class VentanaConfirmarSeleccion extends javax.swing.JPanel {
     private JFrame frame;
-    private String numeroSeleccionado;
-
     /**
      * Creates new form VentanaRecervacion
-     *
      * @param frame
+     * @param numeroComputadora
      */
-    public VentanaSeleccionComputadora(JFrame frame) {
+    public VentanaConfirmarSeleccion(JFrame frame, String numeroComputadora) {
         initComponents();
         this.frame = frame;
-        pnlComputadoras.setLayout(new FlowLayout());
-        this.setDatos();
+        this.lblNumeroComputadora.setText(numeroComputadora);
     }
 
-    /**
-     * metodo que permitira settear las computadoras disponibles
-     */
-    public void setDatos() { //aqui hay que cambiar el parametro
-        for (int i = 0; i < 20; i++) {
-            pnlComputadoras.add(new RegistroComputadora(this, Integer.toString(i)));
-        }
-        pnlComputadoras.revalidate();
-        pnlComputadoras.repaint();
-    }
-    
-    /**
-     * metodo que nos permite cominicarnos con los componentes hijos del pnlComputadoras
-     * @param numero 
-     */
-    public void setNumeroSeleccionado(String numero){
-        this.numeroSeleccionado = numero;
-        lblNumSeleccion.setText("SELECCION : " + numero);
-    }
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -53,7 +29,6 @@ public class VentanaSeleccionComputadora extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelRound1 = new presentacion_portero.componentes.PanelRound();
         pnlProceso = new javax.swing.JPanel();
         pnlContenedor = new presentacion_portero.componentes.PanelRound();
         procesoUno = new presentacion_portero.componentes.PanelRound();
@@ -64,31 +39,14 @@ public class VentanaSeleccionComputadora extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         conectorUnoDos = new javax.swing.JPanel();
         conectorDosTres = new javax.swing.JPanel();
-        lblNumSeleccion = new javax.swing.JLabel();
-        lblSeleccion1 = new javax.swing.JLabel();
-        pnlTiempo = new presentacion_portero.componentes.PanelRound();
-        txfTiempo = new javax.swing.JTextField();
-        btnMenos = new presentacion_portero.componentes.PanelRound();
-        lblMenos = new javax.swing.JLabel();
-        btnMas = new presentacion_portero.componentes.PanelRound();
-        lblMas = new javax.swing.JLabel();
-        pnlComputadoras = new javax.swing.JPanel();
+        lblConfirmar = new javax.swing.JLabel();
         pnlBotones = new javax.swing.JPanel();
         btnRegresar = new presentacion_portero.componentes.PanelRound();
         lblRegresar = new javax.swing.JLabel();
         btnContinuar = new presentacion_portero.componentes.PanelRound();
         lblContinuar = new javax.swing.JLabel();
-
-        javax.swing.GroupLayout panelRound1Layout = new javax.swing.GroupLayout(panelRound1);
-        panelRound1.setLayout(panelRound1Layout);
-        panelRound1Layout.setHorizontalGroup(
-            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        panelRound1Layout.setVerticalGroup(
-            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        imgComputadora = new javax.swing.JLabel();
+        lblNumeroComputadora = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(25, 30, 69));
         setMinimumSize(new java.awt.Dimension(1440, 1024));
@@ -152,7 +110,7 @@ public class VentanaSeleccionComputadora extends javax.swing.JPanel {
 
         pnlContenedor.add(procesoDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, -1, -1));
 
-        procesoTres.setBackground(new java.awt.Color(105, 111, 153));
+        procesoTres.setBackground(new java.awt.Color(25, 50, 178));
         procesoTres.setRoundBottomLeft(200);
         procesoTres.setRoundBottomRight(200);
         procesoTres.setRoundTopLeft(200);
@@ -191,7 +149,7 @@ public class VentanaSeleccionComputadora extends javax.swing.JPanel {
 
         pnlContenedor.add(conectorUnoDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 120, 10));
 
-        conectorDosTres.setBackground(new java.awt.Color(105, 111, 153));
+        conectorDosTres.setBackground(new java.awt.Color(16, 20, 65));
 
         javax.swing.GroupLayout conectorDosTresLayout = new javax.swing.GroupLayout(conectorDosTres);
         conectorDosTres.setLayout(conectorDosTresLayout);
@@ -213,121 +171,23 @@ public class VentanaSeleccionComputadora extends javax.swing.JPanel {
             .addGroup(pnlProcesoLayout.createSequentialGroup()
                 .addGap(495, 495, 495)
                 .addComponent(pnlContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(495, Short.MAX_VALUE))
         );
         pnlProcesoLayout.setVerticalGroup(
             pnlProcesoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlProcesoLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(pnlContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         add(pnlProceso, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 120));
 
-        lblNumSeleccion.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
-        lblNumSeleccion.setForeground(new java.awt.Color(255, 255, 255));
-        lblNumSeleccion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblNumSeleccion.setText("SELECCION : ");
-        add(lblNumSeleccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 360, 40));
-
-        lblSeleccion1.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
-        lblSeleccion1.setForeground(new java.awt.Color(255, 255, 255));
-        lblSeleccion1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblSeleccion1.setText("SELECCION DE COMPUTADORA");
-        add(lblSeleccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 150, 360, 40));
-
-        pnlTiempo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txfTiempo.setBackground(new java.awt.Color(105, 111, 153));
-        txfTiempo.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
-        txfTiempo.setForeground(new java.awt.Color(255, 255, 255));
-        txfTiempo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txfTiempo.setText("120");
-        txfTiempo.setBorder(null);
-        pnlTiempo.add(txfTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 90, 40));
-
-        btnMenos.setBackground(new java.awt.Color(16, 20, 65));
-        btnMenos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnMenosMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnMenosMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnMenosMouseExited(evt);
-            }
-        });
-
-        lblMenos.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
-        lblMenos.setForeground(new java.awt.Color(255, 255, 255));
-        lblMenos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMenos.setText("-");
-        lblMenos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        javax.swing.GroupLayout btnMenosLayout = new javax.swing.GroupLayout(btnMenos);
-        btnMenos.setLayout(btnMenosLayout);
-        btnMenosLayout.setHorizontalGroup(
-            btnMenosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblMenos, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-        );
-        btnMenosLayout.setVerticalGroup(
-            btnMenosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblMenos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-        );
-
-        pnlTiempo.add(btnMenos, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 40, 40));
-
-        btnMas.setBackground(new java.awt.Color(16, 20, 65));
-        btnMas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnMasMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnMasMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnMasMouseExited(evt);
-            }
-        });
-
-        lblMas.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
-        lblMas.setForeground(new java.awt.Color(255, 255, 255));
-        lblMas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMas.setText("+");
-        lblMas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        javax.swing.GroupLayout btnMasLayout = new javax.swing.GroupLayout(btnMas);
-        btnMas.setLayout(btnMasLayout);
-        btnMasLayout.setHorizontalGroup(
-            btnMasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblMas, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-        );
-        btnMasLayout.setVerticalGroup(
-            btnMasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblMas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-        );
-
-        pnlTiempo.add(btnMas, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 40, 40));
-
-        add(pnlTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 150, 170, 40));
-
-        pnlComputadoras.setBackground(new java.awt.Color(25, 30, 69));
-        pnlComputadoras.setMinimumSize(new java.awt.Dimension(100, 100));
-
-        javax.swing.GroupLayout pnlComputadorasLayout = new javax.swing.GroupLayout(pnlComputadoras);
-        pnlComputadoras.setLayout(pnlComputadorasLayout);
-        pnlComputadorasLayout.setHorizontalGroup(
-            pnlComputadorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1330, Short.MAX_VALUE)
-        );
-        pnlComputadorasLayout.setVerticalGroup(
-            pnlComputadorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 640, Short.MAX_VALUE)
-        );
-
-        add(pnlComputadoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 1330, 640));
+        lblConfirmar.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
+        lblConfirmar.setForeground(new java.awt.Color(255, 255, 255));
+        lblConfirmar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblConfirmar.setText("CONFIRMACION DE ELECCION");
+        add(lblConfirmar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 1440, 40));
 
         pnlBotones.setBackground(new java.awt.Color(16, 20, 65));
         pnlBotones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -405,6 +265,15 @@ public class VentanaSeleccionComputadora extends javax.swing.JPanel {
         pnlBotones.add(btnContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 50, -1, -1));
 
         add(pnlBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 880, 1440, 150));
+
+        imgComputadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/iconos/computadora_500.png"))); // NOI18N
+        add(imgComputadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 250, 210));
+
+        lblNumeroComputadora.setFont(new java.awt.Font("MS UI Gothic", 1, 68)); // NOI18N
+        lblNumeroComputadora.setForeground(new java.awt.Color(105, 111, 153));
+        lblNumeroComputadora.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNumeroComputadora.setText("99");
+        add(lblNumeroComputadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 466, 140, 80));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegresarMouseEntered
@@ -419,10 +288,12 @@ public class VentanaSeleccionComputadora extends javax.swing.JPanel {
 
     private void btnRegresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegresarMouseClicked
         // TODO add your handling code here:
-        presentacion_portero.Controlador.mostrarVentanaIdentidad(frame);
+        presentacion_portero.Controlador.mostrarVentanaSeleccion(frame);
     }//GEN-LAST:event_btnRegresarMouseClicked
 
-
+    
+    
+    
     private void btnContinuarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnContinuarMouseEntered
         // TODO add your handling code here:
         btnContinuar.setBackground(new java.awt.Color(4, 40, 215));
@@ -435,70 +306,28 @@ public class VentanaSeleccionComputadora extends javax.swing.JPanel {
 
     private void btnContinuarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnContinuarMouseClicked
         // TODO add your handling code here:
-        presentacion_portero.Controlador.mostrarVentanaConfirmacion(frame, numeroSeleccionado);
+        presentacion_portero.Controlador.mostrarVentanaSeleccion(frame);
     }//GEN-LAST:event_btnContinuarMouseClicked
-
-
-    
-    
-    
-    
-    
-    private void btnMenosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenosMouseEntered
-        // TODO add your handling code here:
-        btnMenos.setBackground(new java.awt.Color(59, 56, 123));
-    }//GEN-LAST:event_btnMenosMouseEntered
-
-    private void btnMenosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenosMouseExited
-        // TODO add your handling code here:
-        btnMenos.setBackground(new java.awt.Color(16, 20, 65));
-    }//GEN-LAST:event_btnMenosMouseExited
-
-    private void btnMenosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenosMouseClicked
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_btnMenosMouseClicked
-
-    private void btnMasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMasMouseEntered
-        // TODO add your handling code here:
-        btnMas.setBackground(new java.awt.Color(59, 56, 123));
-    }//GEN-LAST:event_btnMasMouseEntered
-
-    private void btnMasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMasMouseExited
-        // TODO add your handling code here:
-        btnMas.setBackground(new java.awt.Color(16, 20, 65));
-    }//GEN-LAST:event_btnMasMouseExited
-
-    private void btnMasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMasMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnMasMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private presentacion_portero.componentes.PanelRound btnContinuar;
-    private presentacion_portero.componentes.PanelRound btnMas;
-    private presentacion_portero.componentes.PanelRound btnMenos;
     private presentacion_portero.componentes.PanelRound btnRegresar;
     private javax.swing.JPanel conectorDosTres;
     private javax.swing.JPanel conectorUnoDos;
+    private javax.swing.JLabel imgComputadora;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lblConfirmar;
     private javax.swing.JLabel lblContinuar;
     private javax.swing.JLabel lblDos;
-    private javax.swing.JLabel lblMas;
-    private javax.swing.JLabel lblMenos;
-    private javax.swing.JLabel lblNumSeleccion;
+    private javax.swing.JLabel lblNumeroComputadora;
     private javax.swing.JLabel lblRegresar;
-    private javax.swing.JLabel lblSeleccion1;
     private javax.swing.JLabel lblUno;
-    private presentacion_portero.componentes.PanelRound panelRound1;
     private javax.swing.JPanel pnlBotones;
-    private javax.swing.JPanel pnlComputadoras;
     private presentacion_portero.componentes.PanelRound pnlContenedor;
     private javax.swing.JPanel pnlProceso;
-    private presentacion_portero.componentes.PanelRound pnlTiempo;
     private presentacion_portero.componentes.PanelRound procesoDos;
     private presentacion_portero.componentes.PanelRound procesoTres;
     private presentacion_portero.componentes.PanelRound procesoUno;
-    private javax.swing.JTextField txfTiempo;
     // End of variables declaration//GEN-END:variables
 }
