@@ -1,5 +1,7 @@
 
-package presentacion.vistas;
+package presentacion_bloqueo.vistas;
+
+import javax.swing.JFrame;
 
 
 /**
@@ -10,13 +12,15 @@ public class VentanaBloqueo extends javax.swing.JPanel {
 
     private java.awt.Color colorIn = new java.awt.Color(7, 134, 0, 255);
     private java.awt.Color colorOut = new java.awt.Color(7, 134, 0, 215);
-    
+    private JFrame frame;
     
     /**
      * Creates new form pnlBloqueo
+     * @param frame
      */
-    public VentanaBloqueo() {
+    public VentanaBloqueo(JFrame frame) {
         initComponents();
+        this.frame = frame;
     }
 
     /**
@@ -31,16 +35,16 @@ public class VentanaBloqueo extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         pnlProgramaVersion = new javax.swing.JPanel();
         lblProgramaVersion = new javax.swing.JLabel();
-        pnlEstadoComputadora = new presentacion.componentes.PanelRound();
+        pnlEstadoComputadora = new presentacion_bloqueo.componentes.PanelRound();
         lblEstado = new javax.swing.JLabel();
-        pnlNumComputadora = new presentacion.componentes.PanelRound();
+        pnlNumComputadora = new presentacion_bloqueo.componentes.PanelRound();
         lblNumComputadora = new javax.swing.JLabel();
-        pnlUsuarioReservado = new presentacion.componentes.PanelRound();
+        pnlUsuarioReservado = new presentacion_bloqueo.componentes.PanelRound();
         lblUsuarioReservado = new javax.swing.JLabel();
-        pnlLogin = new presentacion.componentes.PanelRound();
+        pnlLogin = new presentacion_bloqueo.componentes.PanelRound();
         lblIngreseContraseña = new javax.swing.JLabel();
         txfContraseña = new javax.swing.JTextField();
-        btnIngresar = new presentacion.componentes.PanelRound();
+        btnIngresar = new presentacion_bloqueo.componentes.PanelRound();
         lblIngresar = new javax.swing.JLabel();
         lblImgCisco = new javax.swing.JLabel();
 
@@ -173,6 +177,9 @@ public class VentanaBloqueo extends javax.swing.JPanel {
         btnIngresar.setRoundTopLeft(10);
         btnIngresar.setRoundTopRight(10);
         btnIngresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnIngresarMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnIngresarMouseEntered(evt);
             }
@@ -241,6 +248,13 @@ public class VentanaBloqueo extends javax.swing.JPanel {
         lblIngresar.setForeground(new java.awt.Color(242, 242, 242, 255));
     }//GEN-LAST:event_btnIngresarMouseExited
 
+    private void btnIngresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresarMouseClicked
+        // TODO add your handling code here:
+        presentacion_bloqueo.Controlador.mostrarDesbloqueo(frame);
+    }//GEN-LAST:event_btnIngresarMouseClicked
+
+    
+    
     public void setReservacion(String alumno){
         colorIn = new java.awt.Color(25, 50, 178, 255);
         colorOut = new java.awt.Color(25, 50, 178, 215);
@@ -253,7 +267,7 @@ public class VentanaBloqueo extends javax.swing.JPanel {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private presentacion.componentes.PanelRound btnIngresar;
+    private presentacion_bloqueo.componentes.PanelRound btnIngresar;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblEstado;
     private javax.swing.JLabel lblImgCisco;
@@ -262,11 +276,11 @@ public class VentanaBloqueo extends javax.swing.JPanel {
     private javax.swing.JLabel lblNumComputadora;
     private javax.swing.JLabel lblProgramaVersion;
     private javax.swing.JLabel lblUsuarioReservado;
-    private presentacion.componentes.PanelRound pnlEstadoComputadora;
-    private presentacion.componentes.PanelRound pnlLogin;
-    private presentacion.componentes.PanelRound pnlNumComputadora;
+    private presentacion_bloqueo.componentes.PanelRound pnlEstadoComputadora;
+    private presentacion_bloqueo.componentes.PanelRound pnlLogin;
+    private presentacion_bloqueo.componentes.PanelRound pnlNumComputadora;
     private javax.swing.JPanel pnlProgramaVersion;
-    private presentacion.componentes.PanelRound pnlUsuarioReservado;
+    private presentacion_bloqueo.componentes.PanelRound pnlUsuarioReservado;
     private javax.swing.JTextField txfContraseña;
     // End of variables declaration//GEN-END:variables
 }

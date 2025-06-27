@@ -1,4 +1,4 @@
-package presentacion.componentes;
+package presentacion_bloqueo.componentes;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;

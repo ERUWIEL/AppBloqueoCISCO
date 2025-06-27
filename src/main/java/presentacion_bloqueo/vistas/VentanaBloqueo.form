@@ -92,7 +92,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="presentacion.componentes.PanelRound" name="pnlEstadoComputadora">
+    <Container class="presentacion_bloqueo.componentes.PanelRound" name="pnlEstadoComputadora">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="new java.awt.Color(7, 134, 0, 215)" type="code"/>
@@ -138,7 +138,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="presentacion.componentes.PanelRound" name="pnlNumComputadora">
+    <Container class="presentacion_bloqueo.componentes.PanelRound" name="pnlNumComputadora">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="new java.awt.Color(0, 0, 0,215)" type="code"/>
@@ -183,7 +183,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="presentacion.componentes.PanelRound" name="pnlUsuarioReservado">
+    <Container class="presentacion_bloqueo.componentes.PanelRound" name="pnlUsuarioReservado">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="new java.awt.Color(7, 134, 0, 215)" type="code"/>
@@ -227,7 +227,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="presentacion.componentes.PanelRound" name="pnlLogin">
+    <Container class="presentacion_bloqueo.componentes.PanelRound" name="pnlLogin">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="new java.awt.Color(0, 0, 0,215)" type="code"/>
@@ -285,7 +285,7 @@
             <Property name="text" type="java.lang.String" value="jTextField1"/>
           </Properties>
         </Component>
-        <Container class="presentacion.componentes.PanelRound" name="btnIngresar">
+        <Container class="presentacion_bloqueo.componentes.PanelRound" name="btnIngresar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="new java.awt.Color(7, 134, 0, 215)" type="code"/>
@@ -296,6 +296,7 @@
             <Property name="roundTopRight" type="int" value="10"/>
           </Properties>
           <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnIngresarMouseClicked"/>
             <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnIngresarMouseEntered"/>
             <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnIngresarMouseExited"/>
           </Events>
