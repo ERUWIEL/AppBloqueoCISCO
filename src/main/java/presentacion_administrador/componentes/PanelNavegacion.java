@@ -593,10 +593,12 @@ public class PanelNavegacion extends javax.swing.JPanel {
 
     private void btnModificarLaboratorioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnModificarLaboratorioMouseClicked
         // TODO add your handling code here:
+        // desarrollo pendiente
     }//GEN-LAST:event_btnModificarLaboratorioMouseClicked
 
     private void btnListarLaboratoriosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListarLaboratoriosMouseClicked
         // TODO add your handling code here:
+        // desarollo pendiente
     }//GEN-LAST:event_btnListarLaboratoriosMouseClicked
 
     

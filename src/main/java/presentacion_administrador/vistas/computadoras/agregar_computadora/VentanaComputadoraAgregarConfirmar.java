@@ -44,6 +44,7 @@ public class VentanaComputadoraAgregarConfirmar extends javax.swing.JPanel {
         pnlTituloOperacion = new presentacion_administrador.componentes.PanelRound();
         lblTituloOperacion = new javax.swing.JLabel();
         pnlContenidoOperacion = new presentacion_administrador.componentes.PanelRound();
+        lblTituloOperacion1 = new javax.swing.JLabel();
         lblCancelar = new javax.swing.JLabel();
         botonCancelar = new presentacion_administrador.componentes.BotonCancelar();
         lblContinuar = new javax.swing.JLabel();
@@ -192,15 +193,25 @@ public class VentanaComputadoraAgregarConfirmar extends javax.swing.JPanel {
         pnlContenidoOperacion.setRoundBottomLeft(20);
         pnlContenidoOperacion.setRoundBottomRight(20);
 
+        lblTituloOperacion1.setFont(new java.awt.Font("Segoe UI", 0, 32)); // NOI18N
+        lblTituloOperacion1.setForeground(new java.awt.Color(255, 255, 255));
+        lblTituloOperacion1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTituloOperacion1.setText("¿Estas Seguro De Que Quieres Agregar?");
+        lblTituloOperacion1.setToolTipText("");
+        lblTituloOperacion1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
         javax.swing.GroupLayout pnlContenidoOperacionLayout = new javax.swing.GroupLayout(pnlContenidoOperacion);
         pnlContenidoOperacion.setLayout(pnlContenidoOperacionLayout);
         pnlContenidoOperacionLayout.setHorizontalGroup(
             pnlContenidoOperacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1310, Short.MAX_VALUE)
+            .addComponent(lblTituloOperacion1, javax.swing.GroupLayout.DEFAULT_SIZE, 1310, Short.MAX_VALUE)
         );
         pnlContenidoOperacionLayout.setVerticalGroup(
             pnlContenidoOperacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
+            .addGroup(pnlContenidoOperacionLayout.createSequentialGroup()
+                .addGap(246, 246, 246)
+                .addComponent(lblTituloOperacion1)
+                .addContainerGap(341, Short.MAX_VALUE))
         );
 
         add(pnlContenidoOperacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 1310, 630));
@@ -266,6 +277,7 @@ public class VentanaComputadoraAgregarConfirmar extends javax.swing.JPanel {
     private javax.swing.JLabel lblContinuar;
     private javax.swing.JLabel lblDos;
     private javax.swing.JLabel lblTituloOperacion;
+    private javax.swing.JLabel lblTituloOperacion1;
     private javax.swing.JLabel lblTres;
     private javax.swing.JLabel lblUno;
     private presentacion_administrador.componentes.PanelRound pnlBarraProceso;

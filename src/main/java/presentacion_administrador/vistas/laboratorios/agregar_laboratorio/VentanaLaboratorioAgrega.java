@@ -47,9 +47,7 @@ public class VentanaLaboratorioAgrega extends javax.swing.JPanel {
         txfIp = new javax.swing.JTextField();
         pnlEntradaTipo = new presentacion_administrador.componentes.PanelRound();
         lblTipo = new javax.swing.JLabel();
-        pnlSeleccionTipo = new presentacion_administrador.componentes.PanelRound();
-        lblSeleccionTipo = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextField1 = new javax.swing.JTextField();
         lblCancelar = new javax.swing.JLabel();
         botonCancelar = new presentacion_administrador.componentes.BotonCancelar();
         lblContinuar = new javax.swing.JLabel();
@@ -214,56 +212,30 @@ public class VentanaLaboratorioAgrega extends javax.swing.JPanel {
         lblTipo.setText("unidad");
         lblTipo.setToolTipText("");
 
-        pnlSeleccionTipo.setBackground(new java.awt.Color(32, 39, 116));
-        pnlSeleccionTipo.setRoundBottomLeft(10);
-        pnlSeleccionTipo.setRoundBottomRight(10);
-        pnlSeleccionTipo.setRoundTopLeft(10);
-        pnlSeleccionTipo.setRoundTopRight(10);
-
-        lblSeleccionTipo.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lblSeleccionTipo.setForeground(new java.awt.Color(255, 255, 255));
-        lblSeleccionTipo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSeleccionTipo.setText("-- seleccione la unidad --");
-        lblSeleccionTipo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        javax.swing.GroupLayout pnlSeleccionTipoLayout = new javax.swing.GroupLayout(pnlSeleccionTipo);
-        pnlSeleccionTipo.setLayout(pnlSeleccionTipoLayout);
-        pnlSeleccionTipoLayout.setHorizontalGroup(
-            pnlSeleccionTipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSeleccionTipo, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
-        );
-        pnlSeleccionTipoLayout.setVerticalGroup(
-            pnlSeleccionTipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSeleccionTipoLayout.createSequentialGroup()
-                .addGap(7, 7, 7)
-                .addComponent(lblSeleccionTipo, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        jTextField1.setFont(new java.awt.Font("MS UI Gothic", 1, 18)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(153, 153, 153));
+        jTextField1.setText("id de la unidad academica");
 
         javax.swing.GroupLayout pnlEntradaTipoLayout = new javax.swing.GroupLayout(pnlEntradaTipo);
         pnlEntradaTipo.setLayout(pnlEntradaTipoLayout);
         pnlEntradaTipoLayout.setHorizontalGroup(
             pnlEntradaTipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEntradaTipoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pnlSeleccionTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37))
-            .addGroup(pnlEntradaTipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnlEntradaTipoLayout.createSequentialGroup()
-                    .addComponent(lblTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 597, Short.MAX_VALUE)))
+            .addGroup(pnlEntradaTipoLayout.createSequentialGroup()
+                .addComponent(lblTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         pnlEntradaTipoLayout.setVerticalGroup(
             pnlEntradaTipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEntradaTipoLayout.createSequentialGroup()
+            .addGroup(pnlEntradaTipoLayout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(lblTipo, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
+                .addGap(13, 13, 13))
+            .addGroup(pnlEntradaTipoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pnlSeleccionTipo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTextField1)
                 .addContainerGap())
-            .addGroup(pnlEntradaTipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnlEntradaTipoLayout.createSequentialGroup()
-                    .addGap(12, 12, 12)
-                    .addComponent(lblTipo, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
-                    .addGap(13, 13, 13)))
         );
 
         javax.swing.GroupLayout pnlContenidoOperacionLayout = new javax.swing.GroupLayout(pnlContenidoOperacion);
@@ -276,10 +248,6 @@ public class VentanaLaboratorioAgrega extends javax.swing.JPanel {
                     .addComponent(pnlEntradaIp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnlEntradaTipo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(189, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlContenidoOperacionLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(224, 224, 224))
         );
         pnlContenidoOperacionLayout.setVerticalGroup(
             pnlContenidoOperacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -288,9 +256,7 @@ public class VentanaLaboratorioAgrega extends javax.swing.JPanel {
                 .addComponent(pnlEntradaIp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(pnlEntradaTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(166, Short.MAX_VALUE))
+                .addContainerGap(401, Short.MAX_VALUE))
         );
 
         add(pnlContenidoOperacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 1310, 630));
@@ -363,12 +329,11 @@ public class VentanaLaboratorioAgrega extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private presentacion_administrador.componentes.BotonCancelar botonCancelar;
     private presentacion_administrador.componentes.BotonSiguiente botonContinuar;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblCancelar;
     private javax.swing.JLabel lblContinuar;
     private javax.swing.JLabel lblDos;
     private javax.swing.JLabel lblIp;
-    private javax.swing.JLabel lblSeleccionTipo;
     private javax.swing.JLabel lblTipo;
     private javax.swing.JLabel lblTituloOperacion;
     private javax.swing.JLabel lblUno;
@@ -377,7 +342,6 @@ public class VentanaLaboratorioAgrega extends javax.swing.JPanel {
     private presentacion_administrador.componentes.PanelRound pnlDos;
     private presentacion_administrador.componentes.PanelRound pnlEntradaIp;
     private presentacion_administrador.componentes.PanelRound pnlEntradaTipo;
-    private presentacion_administrador.componentes.PanelRound pnlSeleccionTipo;
     private presentacion_administrador.componentes.PanelRound pnlTituloOperacion;
     private presentacion_administrador.componentes.PanelRound pnlUno;
     private javax.swing.JPanel separadorUnoDos;

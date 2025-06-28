@@ -306,7 +306,7 @@ public class VentanaConfirmarSeleccion extends javax.swing.JPanel {
 
     private void btnContinuarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnContinuarMouseClicked
         // TODO add your handling code here:
-        presentacion_portero.Controlador.mostrarVentanaSeleccion(frame);
+        presentacion_portero.Controlador.mostrarVentanaBienvenida(frame);
     }//GEN-LAST:event_btnContinuarMouseClicked
 
 
