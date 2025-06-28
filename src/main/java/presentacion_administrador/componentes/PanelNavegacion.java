@@ -5,7 +5,7 @@ import javax.swing.SwingUtilities;
 
 /**
  * clase que modelara el panel de botones de la navegacion
- * @author angel
+ * @author erwbyel
  */
 public class PanelNavegacion extends javax.swing.JPanel {
 
@@ -564,11 +564,11 @@ public class PanelNavegacion extends javax.swing.JPanel {
     }//GEN-LAST:event_btnAgregarCompuMouseClicked1
 
     private void btnEliminarCompuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarCompuMouseClicked
-        // pendiente en el figma
+        presentacion_administrador.Controlador.mostrarVentanaComputadoraQuita(frame);
     }//GEN-LAST:event_btnEliminarCompuMouseClicked
 
     private void btnListarCompuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListarCompuMouseClicked
-        // pendiente en el figma
+        presentacion_administrador.Controlador.mostrarVentanaComputadoraLista(frame);
     }//GEN-LAST:event_btnListarCompuMouseClicked
 
     
@@ -578,11 +578,11 @@ public class PanelNavegacion extends javax.swing.JPanel {
     }//GEN-LAST:event_btnBloquearAlumnoMouseClicked
 
     private void btnDesbloquearAlumnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDesbloquearAlumnoMouseClicked
-        // TODO add your handling code here:
+        presentacion_administrador.Controlador.mostrarVentanaBloqueoQuita(frame);
     }//GEN-LAST:event_btnDesbloquearAlumnoMouseClicked
 
     private void btnListarBloqueosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListarBloqueosMouseClicked
-        // pendiente en el figma
+        presentacion_administrador.Controlador.mostrarVentanaBloqueoLista(frame);
     }//GEN-LAST:event_btnListarBloqueosMouseClicked
 
     

@@ -1,14 +1,13 @@
-package presentacion_administrador.vistas.laboratorios.agregar_laboratorio;
+package presentacion_administrador.vistas.computadoras.quitar_computadora;
 
 import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
 import presentacion_administrador.componentes.PanelNavegacion;
 
 /**
  *
  * @author erwbyel
  */
-public class VentanaLaboratorioAgrega extends javax.swing.JPanel {
+public class VentanaComputadoraQuitaConfirmar extends javax.swing.JPanel {
 
     private JFrame frame;
 
@@ -17,7 +16,7 @@ public class VentanaLaboratorioAgrega extends javax.swing.JPanel {
      *
      * @param frame
      */
-    public VentanaLaboratorioAgrega(JFrame frame) {
+    public VentanaComputadoraQuitaConfirmar(JFrame frame) {
         this.frame = frame;
         initComponents();
         PanelNavegacion pnlNavegacion = new PanelNavegacion(frame);
@@ -42,14 +41,7 @@ public class VentanaLaboratorioAgrega extends javax.swing.JPanel {
         pnlTituloOperacion = new presentacion_administrador.componentes.PanelRound();
         lblTituloOperacion = new javax.swing.JLabel();
         pnlContenidoOperacion = new presentacion_administrador.componentes.PanelRound();
-        pnlEntradaIp = new presentacion_administrador.componentes.PanelRound();
-        lblIp = new javax.swing.JLabel();
-        txfIp = new javax.swing.JTextField();
-        pnlEntradaTipo = new presentacion_administrador.componentes.PanelRound();
-        lblTipo = new javax.swing.JLabel();
-        pnlSeleccionTipo = new presentacion_administrador.componentes.PanelRound();
-        lblSeleccionTipo = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        lblAnuncio = new javax.swing.JLabel();
         lblCancelar = new javax.swing.JLabel();
         botonCancelar = new presentacion_administrador.componentes.BotonCancelar();
         lblContinuar = new javax.swing.JLabel();
@@ -90,7 +82,7 @@ public class VentanaLaboratorioAgrega extends javax.swing.JPanel {
 
         pnlBarraProceso.add(pnlUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 50, 50));
 
-        pnlDos.setBackground(new java.awt.Color(105, 111, 153));
+        pnlDos.setBackground(new java.awt.Color(25, 50, 178));
         pnlDos.setRoundBottomLeft(200);
         pnlDos.setRoundBottomRight(200);
         pnlDos.setRoundTopLeft(200);
@@ -114,7 +106,7 @@ public class VentanaLaboratorioAgrega extends javax.swing.JPanel {
 
         pnlBarraProceso.add(pnlDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 50, 50));
 
-        separadorUnoDos.setBackground(new java.awt.Color(105, 111, 153));
+        separadorUnoDos.setBackground(new java.awt.Color(18, 22, 71));
 
         javax.swing.GroupLayout separadorUnoDosLayout = new javax.swing.GroupLayout(separadorUnoDos);
         separadorUnoDos.setLayout(separadorUnoDosLayout);
@@ -138,7 +130,7 @@ public class VentanaLaboratorioAgrega extends javax.swing.JPanel {
         lblTituloOperacion.setFont(new java.awt.Font("Segoe UI", 0, 32)); // NOI18N
         lblTituloOperacion.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloOperacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTituloOperacion.setText("agregar laboratorio");
+        lblTituloOperacion.setText("confirmacion de eliminacion");
         lblTituloOperacion.setToolTipText("");
         lblTituloOperacion.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
@@ -159,138 +151,25 @@ public class VentanaLaboratorioAgrega extends javax.swing.JPanel {
         pnlContenidoOperacion.setRoundBottomLeft(20);
         pnlContenidoOperacion.setRoundBottomRight(20);
 
-        pnlEntradaIp.setBackground(new java.awt.Color(98, 102, 141));
-        pnlEntradaIp.setRoundBottomLeft(15);
-        pnlEntradaIp.setRoundBottomRight(15);
-        pnlEntradaIp.setRoundTopLeft(15);
-        pnlEntradaIp.setRoundTopRight(15);
-
-        lblIp.setFont(new java.awt.Font("Segoe UI", 0, 32)); // NOI18N
-        lblIp.setForeground(new java.awt.Color(255, 255, 255));
-        lblIp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblIp.setText("nombre laboratorio");
-        lblIp.setToolTipText("");
-
-        txfIp.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        txfIp.setForeground(new java.awt.Color(153, 153, 153));
-        txfIp.setText("  ingrese el nombre del laboratorio");
-        txfIp.setBorder(null);
-
-        javax.swing.GroupLayout pnlEntradaIpLayout = new javax.swing.GroupLayout(pnlEntradaIp);
-        pnlEntradaIp.setLayout(pnlEntradaIpLayout);
-        pnlEntradaIpLayout.setHorizontalGroup(
-            pnlEntradaIpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlEntradaIpLayout.createSequentialGroup()
-                .addGap(330, 330, 330)
-                .addComponent(txfIp, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
-            .addGroup(pnlEntradaIpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnlEntradaIpLayout.createSequentialGroup()
-                    .addComponent(lblIp, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 597, Short.MAX_VALUE)))
-        );
-        pnlEntradaIpLayout.setVerticalGroup(
-            pnlEntradaIpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlEntradaIpLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txfIp, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(pnlEntradaIpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnlEntradaIpLayout.createSequentialGroup()
-                    .addGap(7, 7, 7)
-                    .addComponent(lblIp, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
-                    .addGap(8, 8, 8)))
-        );
-
-        pnlEntradaTipo.setBackground(new java.awt.Color(98, 102, 141));
-        pnlEntradaTipo.setRoundBottomLeft(15);
-        pnlEntradaTipo.setRoundBottomRight(15);
-        pnlEntradaTipo.setRoundTopLeft(15);
-        pnlEntradaTipo.setRoundTopRight(15);
-
-        lblTipo.setFont(new java.awt.Font("Segoe UI", 0, 32)); // NOI18N
-        lblTipo.setForeground(new java.awt.Color(255, 255, 255));
-        lblTipo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTipo.setText("unidad");
-        lblTipo.setToolTipText("");
-
-        pnlSeleccionTipo.setBackground(new java.awt.Color(32, 39, 116));
-        pnlSeleccionTipo.setRoundBottomLeft(10);
-        pnlSeleccionTipo.setRoundBottomRight(10);
-        pnlSeleccionTipo.setRoundTopLeft(10);
-        pnlSeleccionTipo.setRoundTopRight(10);
-
-        lblSeleccionTipo.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lblSeleccionTipo.setForeground(new java.awt.Color(255, 255, 255));
-        lblSeleccionTipo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSeleccionTipo.setText("-- seleccione la unidad --");
-        lblSeleccionTipo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        javax.swing.GroupLayout pnlSeleccionTipoLayout = new javax.swing.GroupLayout(pnlSeleccionTipo);
-        pnlSeleccionTipo.setLayout(pnlSeleccionTipoLayout);
-        pnlSeleccionTipoLayout.setHorizontalGroup(
-            pnlSeleccionTipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSeleccionTipo, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
-        );
-        pnlSeleccionTipoLayout.setVerticalGroup(
-            pnlSeleccionTipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSeleccionTipoLayout.createSequentialGroup()
-                .addGap(7, 7, 7)
-                .addComponent(lblSeleccionTipo, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout pnlEntradaTipoLayout = new javax.swing.GroupLayout(pnlEntradaTipo);
-        pnlEntradaTipo.setLayout(pnlEntradaTipoLayout);
-        pnlEntradaTipoLayout.setHorizontalGroup(
-            pnlEntradaTipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEntradaTipoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pnlSeleccionTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37))
-            .addGroup(pnlEntradaTipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnlEntradaTipoLayout.createSequentialGroup()
-                    .addComponent(lblTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 597, Short.MAX_VALUE)))
-        );
-        pnlEntradaTipoLayout.setVerticalGroup(
-            pnlEntradaTipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEntradaTipoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pnlSeleccionTipo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(pnlEntradaTipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnlEntradaTipoLayout.createSequentialGroup()
-                    .addGap(12, 12, 12)
-                    .addComponent(lblTipo, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
-                    .addGap(13, 13, 13)))
-        );
+        lblAnuncio.setFont(new java.awt.Font("Segoe UI", 0, 32)); // NOI18N
+        lblAnuncio.setForeground(new java.awt.Color(255, 255, 255));
+        lblAnuncio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAnuncio.setText("se eliminaran las siguientes unidades");
+        lblAnuncio.setToolTipText("");
+        lblAnuncio.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         javax.swing.GroupLayout pnlContenidoOperacionLayout = new javax.swing.GroupLayout(pnlContenidoOperacion);
         pnlContenidoOperacion.setLayout(pnlContenidoOperacionLayout);
         pnlContenidoOperacionLayout.setHorizontalGroup(
             pnlContenidoOperacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlContenidoOperacionLayout.createSequentialGroup()
-                .addGap(195, 195, 195)
-                .addGroup(pnlContenidoOperacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(pnlEntradaIp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlEntradaTipo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(189, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlContenidoOperacionLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(224, 224, 224))
+            .addComponent(lblAnuncio, javax.swing.GroupLayout.DEFAULT_SIZE, 1310, Short.MAX_VALUE)
         );
         pnlContenidoOperacionLayout.setVerticalGroup(
             pnlContenidoOperacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlContenidoOperacionLayout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(pnlEntradaIp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(pnlEntradaTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(166, Short.MAX_VALUE))
+                .addGap(33, 33, 33)
+                .addComponent(lblAnuncio)
+                .addContainerGap(554, Short.MAX_VALUE))
         );
 
         add(pnlContenidoOperacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 1310, 630));
@@ -340,47 +219,28 @@ public class VentanaLaboratorioAgrega extends javax.swing.JPanel {
 
     //opciones de navegacion
     private void lblCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCancelarMouseClicked
-        presentacion_administrador.Controlador.mostrarVentanaInicio(frame);
+        presentacion_administrador.Controlador.mostrarVentanaComputadoraQuita(frame);
     }//GEN-LAST:event_lblCancelarMouseClicked
 
     private void botonContinuarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonContinuarMouseClicked
-        mostrarVentanaLaboratorioAgregaConfirmacion(frame);
+        //logica de eliminacion
+        presentacion_administrador.Controlador.mostrarVentanaInicio(frame);
     }//GEN-LAST:event_botonContinuarMouseClicked
-
-    /**
-     * ventana que permite continuar el proceso de agregar un laboratorio
-     *
-     * @param frame
-     */
-    public static void mostrarVentanaLaboratorioAgregaConfirmacion(JFrame frame) {
-        SwingUtilities.invokeLater(() -> {
-            VentanaLaboratorioAgregaConfirmar ventana = new VentanaLaboratorioAgregaConfirmar(frame);
-            frame.setContentPane(ventana);
-            frame.revalidate();
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private presentacion_administrador.componentes.BotonCancelar botonCancelar;
     private presentacion_administrador.componentes.BotonSiguiente botonContinuar;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblAnuncio;
     private javax.swing.JLabel lblCancelar;
     private javax.swing.JLabel lblContinuar;
     private javax.swing.JLabel lblDos;
-    private javax.swing.JLabel lblIp;
-    private javax.swing.JLabel lblSeleccionTipo;
-    private javax.swing.JLabel lblTipo;
     private javax.swing.JLabel lblTituloOperacion;
     private javax.swing.JLabel lblUno;
     private presentacion_administrador.componentes.PanelRound pnlBarraProceso;
     private presentacion_administrador.componentes.PanelRound pnlContenidoOperacion;
     private presentacion_administrador.componentes.PanelRound pnlDos;
-    private presentacion_administrador.componentes.PanelRound pnlEntradaIp;
-    private presentacion_administrador.componentes.PanelRound pnlEntradaTipo;
-    private presentacion_administrador.componentes.PanelRound pnlSeleccionTipo;
     private presentacion_administrador.componentes.PanelRound pnlTituloOperacion;
     private presentacion_administrador.componentes.PanelRound pnlUno;
     private javax.swing.JPanel separadorUnoDos;
-    private javax.swing.JTextField txfIp;
     // End of variables declaration//GEN-END:variables
 }

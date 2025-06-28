@@ -7,6 +7,10 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import presentacion_administrador.vistas.*;
 import presentacion_administrador.vistas.bloqueos.agregar_bloqueo.VentanaBloqueoAgrega;
+import presentacion_administrador.vistas.bloqueos.listar_bloqueo.VentanaBloqueoLista;
+import presentacion_administrador.vistas.bloqueos.quitar_bloqueo.VentanaBloqueoQuita;
+import presentacion_administrador.vistas.computadoras.listar_computadora.VentanaComputadoraLista;
+import presentacion_administrador.vistas.computadoras.quitar_computadora.VentanaComputadoraQuita;
 
 /**
  * clase que controla las ventanas del admin
@@ -64,7 +68,34 @@ public class Controlador extends JFrame {
             frame.revalidate();
         });
     }
-
+    
+    /**
+     * ventana que permite iniciar el proceso de quitar una computadora
+     *
+     * @param frame
+     */
+    public static void mostrarVentanaComputadoraQuita(JFrame frame) {
+        SwingUtilities.invokeLater(() -> {
+            VentanaComputadoraQuita ventana = new VentanaComputadoraQuita(frame);
+            frame.setContentPane(ventana);
+            frame.revalidate();
+        });
+    }
+    
+    /**
+     * ventana que permite iniciar el proceso de listar una computadora
+     *
+     * @param frame
+     */
+    public static void mostrarVentanaComputadoraLista(JFrame frame) {
+        SwingUtilities.invokeLater(() -> {
+            VentanaComputadoraLista ventana = new VentanaComputadoraLista(frame);
+            frame.setContentPane(ventana);
+            frame.revalidate();
+        });
+    }
+    
+    
     //Ventanas de Laboratorios
     /**
      * ventana que permite iniciar el proceso de agregar un laboratorio
@@ -92,4 +123,33 @@ public class Controlador extends JFrame {
             frame.revalidate();
         });
     }
+    
+    /**
+     * ventana que permite iniciar el proceso de quitar un bloqueo
+     *
+     * @param frame
+     */
+    public static void mostrarVentanaBloqueoQuita(JFrame frame) {
+        SwingUtilities.invokeLater(() -> {
+            VentanaBloqueoQuita ventana = new VentanaBloqueoQuita(frame);
+            frame.setContentPane(ventana);
+            frame.revalidate();
+        });
+    }
+    
+    /**
+     * ventana que permite iniciar el proceso de listar un bloqueo
+     *
+     * @param frame
+     */
+    public static void mostrarVentanaBloqueoLista(JFrame frame) {
+        SwingUtilities.invokeLater(() -> {
+            VentanaBloqueoLista ventana = new VentanaBloqueoLista(frame);
+            frame.setContentPane(ventana);
+            frame.revalidate();
+        });
+    }
+    
+    
+    
 }

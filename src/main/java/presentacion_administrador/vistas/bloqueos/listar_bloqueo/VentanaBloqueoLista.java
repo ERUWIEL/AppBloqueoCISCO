@@ -1,28 +1,28 @@
-package presentacion_administrador.vistas.computadoras.agregar_computadora;
+package presentacion_administrador.vistas.bloqueos.listar_bloqueo;
 
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JFrame;
 import presentacion_administrador.componentes.PanelNavegacion;
-import presentacion_administrador.componentes.registros.RegistroProgramas;
+import presentacion_administrador.componentes.registros.RegistroBloqueos;
 
 /**
  *
  * @author erwbyel
  */
-public class VentanaComputadoraAgregaProgramas extends javax.swing.JPanel {
+public class VentanaBloqueoLista extends javax.swing.JPanel {
 
     private JFrame frame;
     private int paginaActual = 0;
     private int elementosPorPagina = 8;
-    private List<RegistroProgramas> lista;
+    private List<RegistroBloqueos> lista;
 
     /**
      * Creates new form VentanaBienvenida
      *
      * @param frame
      */
-    public VentanaComputadoraAgregaProgramas(JFrame frame) {
+    public VentanaBloqueoLista(JFrame frame) {
         this.frame = frame;
         initComponents();
         PanelNavegacion pnlNavegacion = new PanelNavegacion(frame);
@@ -43,12 +43,6 @@ public class VentanaComputadoraAgregaProgramas extends javax.swing.JPanel {
         pnlBarraProceso = new presentacion_administrador.componentes.PanelRound();
         pnlUno = new presentacion_administrador.componentes.PanelRound();
         lblUno = new javax.swing.JLabel();
-        pnlDos = new presentacion_administrador.componentes.PanelRound();
-        lblDos = new javax.swing.JLabel();
-        pnlTres = new presentacion_administrador.componentes.PanelRound();
-        lblTres = new javax.swing.JLabel();
-        separadorUnoDos = new javax.swing.JPanel();
-        separadorDosTres = new javax.swing.JPanel();
         pnlTituloOperacion = new presentacion_administrador.componentes.PanelRound();
         lblTituloOperacion = new javax.swing.JLabel();
         pnlContenidoOperacion = new presentacion_administrador.componentes.PanelRound();
@@ -56,7 +50,6 @@ public class VentanaComputadoraAgregaProgramas extends javax.swing.JPanel {
         lblNumero = new javax.swing.JLabel();
         lblNombre = new javax.swing.JLabel();
         lblVersion = new javax.swing.JLabel();
-        lblOpciones = new javax.swing.JLabel();
         pnlTablaContenido = new javax.swing.JPanel();
         btnAnteriorPagina = new presentacion_administrador.componentes.PanelRound();
         lblAnterior = new javax.swing.JLabel();
@@ -64,8 +57,6 @@ public class VentanaComputadoraAgregaProgramas extends javax.swing.JPanel {
         lblSiguiente = new javax.swing.JLabel();
         lblCancelar = new javax.swing.JLabel();
         botonCancelar = new presentacion_administrador.componentes.BotonCancelar();
-        lblContinuar = new javax.swing.JLabel();
-        botonContinuar = new presentacion_administrador.componentes.BotonSiguiente();
 
         setBackground(new java.awt.Color(16, 20, 65));
         setMinimumSize(new java.awt.Dimension(1440, 1024));
@@ -102,85 +93,7 @@ public class VentanaComputadoraAgregaProgramas extends javax.swing.JPanel {
 
         pnlBarraProceso.add(pnlUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 50, 50));
 
-        pnlDos.setBackground(new java.awt.Color(25, 50, 178));
-        pnlDos.setRoundBottomLeft(200);
-        pnlDos.setRoundBottomRight(200);
-        pnlDos.setRoundTopLeft(200);
-        pnlDos.setRoundTopRight(200);
-
-        lblDos.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblDos.setForeground(new java.awt.Color(255, 255, 255));
-        lblDos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblDos.setText("2");
-
-        javax.swing.GroupLayout pnlDosLayout = new javax.swing.GroupLayout(pnlDos);
-        pnlDos.setLayout(pnlDosLayout);
-        pnlDosLayout.setHorizontalGroup(
-            pnlDosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblDos, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-        pnlDosLayout.setVerticalGroup(
-            pnlDosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblDos, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        pnlBarraProceso.add(pnlDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 50, 50));
-
-        pnlTres.setBackground(new java.awt.Color(105, 111, 153));
-        pnlTres.setRoundBottomLeft(200);
-        pnlTres.setRoundBottomRight(200);
-        pnlTres.setRoundTopLeft(200);
-        pnlTres.setRoundTopRight(200);
-
-        lblTres.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblTres.setForeground(new java.awt.Color(255, 255, 255));
-        lblTres.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTres.setText("3");
-
-        javax.swing.GroupLayout pnlTresLayout = new javax.swing.GroupLayout(pnlTres);
-        pnlTres.setLayout(pnlTresLayout);
-        pnlTresLayout.setHorizontalGroup(
-            pnlTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblTres, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-        pnlTresLayout.setVerticalGroup(
-            pnlTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblTres, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        pnlBarraProceso.add(pnlTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 50, 50));
-
-        separadorUnoDos.setBackground(new java.awt.Color(16, 20, 65));
-
-        javax.swing.GroupLayout separadorUnoDosLayout = new javax.swing.GroupLayout(separadorUnoDos);
-        separadorUnoDos.setLayout(separadorUnoDosLayout);
-        separadorUnoDosLayout.setHorizontalGroup(
-            separadorUnoDosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
-        );
-        separadorUnoDosLayout.setVerticalGroup(
-            separadorUnoDosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 10, Short.MAX_VALUE)
-        );
-
-        pnlBarraProceso.add(separadorUnoDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 90, -1));
-
-        separadorDosTres.setBackground(new java.awt.Color(105, 111, 153));
-
-        javax.swing.GroupLayout separadorDosTresLayout = new javax.swing.GroupLayout(separadorDosTres);
-        separadorDosTres.setLayout(separadorDosTresLayout);
-        separadorDosTresLayout.setHorizontalGroup(
-            separadorDosTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
-        );
-        separadorDosTresLayout.setVerticalGroup(
-            separadorDosTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 10, Short.MAX_VALUE)
-        );
-
-        pnlBarraProceso.add(separadorDosTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 90, -1));
-
-        add(pnlBarraProceso, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 190, 330, 70));
+        add(pnlBarraProceso, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 190, 90, 70));
 
         pnlTituloOperacion.setBackground(new java.awt.Color(105, 111, 153));
         pnlTituloOperacion.setRoundTopLeft(20);
@@ -189,7 +102,7 @@ public class VentanaComputadoraAgregaProgramas extends javax.swing.JPanel {
         lblTituloOperacion.setFont(new java.awt.Font("Segoe UI", 0, 32)); // NOI18N
         lblTituloOperacion.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloOperacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTituloOperacion.setText("seleccion de programas");
+        lblTituloOperacion.setText("listado de bloqueos");
         lblTituloOperacion.setToolTipText("");
         lblTituloOperacion.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
@@ -219,22 +132,17 @@ public class VentanaComputadoraAgregaProgramas extends javax.swing.JPanel {
         lblNumero.setFont(new java.awt.Font("MS UI Gothic", 1, 18)); // NOI18N
         lblNumero.setForeground(new java.awt.Color(255, 255, 255));
         lblNumero.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblNumero.setText("numero");
+        lblNumero.setText("nombre");
 
         lblNombre.setFont(new java.awt.Font("MS UI Gothic", 1, 18)); // NOI18N
         lblNombre.setForeground(new java.awt.Color(255, 255, 255));
         lblNombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblNombre.setText("nombre del software");
+        lblNombre.setText("fecha bloqueo");
 
         lblVersion.setFont(new java.awt.Font("MS UI Gothic", 1, 18)); // NOI18N
         lblVersion.setForeground(new java.awt.Color(255, 255, 255));
         lblVersion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblVersion.setText("version del software");
-
-        lblOpciones.setFont(new java.awt.Font("MS UI Gothic", 1, 18)); // NOI18N
-        lblOpciones.setForeground(new java.awt.Color(255, 255, 255));
-        lblOpciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblOpciones.setText("opciones");
+        lblVersion.setText("fecha desbloqueo");
 
         pnlTablaContenido.setBackground(new java.awt.Color(16, 20, 65));
         pnlTablaContenido.setLayout(new javax.swing.BoxLayout(pnlTablaContenido, javax.swing.BoxLayout.Y_AXIS));
@@ -315,19 +223,17 @@ public class VentanaComputadoraAgregaProgramas extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblVersion, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblOpciones, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)))))
+                                .addComponent(lblVersion, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE)))))
                 .addGap(14, 14, 14))
         );
         pnlTablaLayout.setVerticalGroup(
             pnlTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlTablaLayout.createSequentialGroup()
-                .addGroup(pnlTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnlTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblVersion, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlTablaContenido, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -359,54 +265,23 @@ public class VentanaComputadoraAgregaProgramas extends javax.swing.JPanel {
         lblCancelar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lblCancelar.setForeground(new java.awt.Color(255, 255, 255));
         lblCancelar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblCancelar.setText("cancelar");
+        lblCancelar.setText("regresar a inicio");
         lblCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblCancelarMouseClicked(evt);
             }
         });
-        add(lblCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 910, 330, 50));
+        add(lblCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 910, 400, 50));
 
         botonCancelar.setBackground(new java.awt.Color(212, 82, 82));
-        add(botonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 910, 330, 50));
-
-        lblContinuar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lblContinuar.setForeground(new java.awt.Color(255, 255, 255));
-        lblContinuar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblContinuar.setText("continuar");
-        lblContinuar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        add(lblContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 910, 320, 50));
-
-        botonContinuar.setBackground(new java.awt.Color(25, 50, 178));
-        botonContinuar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botonContinuarMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout botonContinuarLayout = new javax.swing.GroupLayout(botonContinuar);
-        botonContinuar.setLayout(botonContinuarLayout);
-        botonContinuarLayout.setHorizontalGroup(
-            botonContinuarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 320, Short.MAX_VALUE)
-        );
-        botonContinuarLayout.setVerticalGroup(
-            botonContinuarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        add(botonContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 910, 320, 50));
+        add(botonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 910, 400, 50));
     }// </editor-fold>//GEN-END:initComponents
 
     //opciones de navegacion
     private void lblCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCancelarMouseClicked
-        presentacion_administrador.Controlador.mostrarVentanaComputadoraAgrega(frame);
+        presentacion_administrador.Controlador.mostrarVentanaInicio(frame);
     }//GEN-LAST:event_lblCancelarMouseClicked
-
-    private void botonContinuarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonContinuarMouseClicked
-        presentacion_administrador.vistas.computadoras.agregar_computadora.VentanaComputadoraAgrega.mostrarVentanaComputadoraAgregarConfirmacion(frame);
-    }//GEN-LAST:event_botonContinuarMouseClicked
 
     
     //opciones para la paginacion
@@ -435,11 +310,11 @@ public class VentanaComputadoraAgregaProgramas extends javax.swing.JPanel {
         pnlTablaContenido.repaint();
     }
 
-    private List<RegistroProgramas> getget() {
-        List<RegistroProgramas> listaNueva = new ArrayList<>();
+    private List<RegistroBloqueos> getget() {
+        List<RegistroBloqueos> listaNueva = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            RegistroProgramas programas = new RegistroProgramas(String.valueOf(i), "MINECRAFT", "1.20.1");
-            listaNueva.add(programas);
+            RegistroBloqueos bloqueos = new RegistroBloqueos(String.valueOf(i), "INSANO", "N/A");
+            listaNueva.add(bloqueos);
         }
         return listaNueva;
     }
@@ -447,30 +322,21 @@ public class VentanaComputadoraAgregaProgramas extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private presentacion_administrador.componentes.BotonCancelar botonCancelar;
-    private presentacion_administrador.componentes.BotonSiguiente botonContinuar;
     private presentacion_administrador.componentes.PanelRound btnAnteriorPagina;
     private presentacion_administrador.componentes.PanelRound btnSiguientePagina;
     private javax.swing.JLabel lblAnterior;
     private javax.swing.JLabel lblCancelar;
-    private javax.swing.JLabel lblContinuar;
-    private javax.swing.JLabel lblDos;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblNumero;
-    private javax.swing.JLabel lblOpciones;
     private javax.swing.JLabel lblSiguiente;
     private javax.swing.JLabel lblTituloOperacion;
-    private javax.swing.JLabel lblTres;
     private javax.swing.JLabel lblUno;
     private javax.swing.JLabel lblVersion;
     private presentacion_administrador.componentes.PanelRound pnlBarraProceso;
     private presentacion_administrador.componentes.PanelRound pnlContenidoOperacion;
-    private presentacion_administrador.componentes.PanelRound pnlDos;
     private presentacion_administrador.componentes.PanelRound pnlTabla;
     private javax.swing.JPanel pnlTablaContenido;
     private presentacion_administrador.componentes.PanelRound pnlTituloOperacion;
-    private presentacion_administrador.componentes.PanelRound pnlTres;
     private presentacion_administrador.componentes.PanelRound pnlUno;
-    private javax.swing.JPanel separadorDosTres;
-    private javax.swing.JPanel separadorUnoDos;
     // End of variables declaration//GEN-END:variables
 }
