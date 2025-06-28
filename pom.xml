@@ -21,5 +21,20 @@
             <artifactId>LGoodDatePicker</artifactId>
             <version>11.2.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.luishonshon</groupId>
+            <artifactId>SistemaCISCODominio</artifactId>
+            <version>6579de3fe1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.luishonshon</groupId>
+            <artifactId>SistemaCISCOPersistencia</artifactId>
+            <version>-94ced22e66-1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.luishonshon</groupId>
+            <artifactId>SistemaCISCONegocio</artifactId>
+            <version>0b4b927ce2</version>
+        </dependency>
     </dependencies>
 </project>
