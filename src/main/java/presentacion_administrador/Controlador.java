@@ -1,11 +1,12 @@
 package presentacion_administrador;
 
-import presentacion_administrador.vistas.computadoras.agregar_computadora.VentanaAgregarConfirmar;
-import presentacion_administrador.vistas.computadoras.agregar_computadora.VentanaAgregarProgramas;
-import presentacion_administrador.vistas.computadoras.agregar_computadora.VentanaAgregarComputadora;
+import presentacion_administrador.vistas.computadoras.agregar_computadora.*;
+import presentacion_administrador.vistas.laboratorios.agregar_laboratorio.*;
+
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import presentacion_administrador.vistas.*;
+import presentacion_administrador.vistas.bloqueos.agregar_bloqueo.VentanaBloqueoAgrega;
 
 /**
  * clase que controla las ventanas del admin
@@ -39,7 +40,8 @@ public class Controlador extends JFrame {
 
     /**
      * ventana que permite volver al menu inicial
-     * @param frame 
+     *
+     * @param frame
      */
     public static void mostrarVentanaInicio(JFrame frame) {
         SwingUtilities.invokeLater(() -> {
@@ -49,38 +51,45 @@ public class Controlador extends JFrame {
         });
     }
 
+    //Ventanas de Computadoras
     /**
      * ventana que permite iniciar el proceso de agregar una computadora
-     * @param frame 
+     *
+     * @param frame
      */
-    public static void mostrarVentanaAgregarComputadora(JFrame frame) {
+    public static void mostrarVentanaComputadoraAgrega(JFrame frame) {
         SwingUtilities.invokeLater(() -> {
-            VentanaAgregarComputadora ventana = new VentanaAgregarComputadora(frame);
+            VentanaComputadoraAgrega ventana = new VentanaComputadoraAgrega(frame);
             frame.setContentPane(ventana);
             frame.revalidate();
         });
     }
+
+    //Ventanas de Laboratorios
     /**
-     * ventana que permite continuar el proceso de agregar una computadora
-     * @param frame 
+     * ventana que permite iniciar el proceso de agregar un laboratorio
+     *
+     * @param frame
      */
-    public static void mostrarVentanaAgregarProgramas(JFrame frame) {
+    public static void mostrarVentanaLaboratorioAgrega(JFrame frame) {
         SwingUtilities.invokeLater(() -> {
-            VentanaAgregarProgramas ventana = new VentanaAgregarProgramas(frame);
+            VentanaLaboratorioAgrega ventana = new VentanaLaboratorioAgrega(frame);
             frame.setContentPane(ventana);
             frame.revalidate();
         });
     }
+
+    //Ventanas de Bloqueos
     /**
-     * ventana que permite continuar el proceso de agregar una computadora
-     * @param frame 
+     * ventana que permite iniciar el proceso de agregar un bloqueo
+     *
+     * @param frame
      */
-    public static void mostrarVentanaAgregarConfirmacion(JFrame frame) {
+    public static void mostrarVentanaBloqueoAgrega(JFrame frame) {
         SwingUtilities.invokeLater(() -> {
-            VentanaAgregarConfirmar ventana = new VentanaAgregarConfirmar(frame);
+            VentanaBloqueoAgrega ventana = new VentanaBloqueoAgrega(frame);
             frame.setContentPane(ventana);
             frame.revalidate();
         });
     }
-    
 }

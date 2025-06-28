@@ -1,13 +1,13 @@
-package presentacion_administrador.vistas.computadoras.agregar_computadora;
+package presentacion_administrador.componentes;
 
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 /**
- *
+ * clase que modelara el panel de botones de la navegacion
  * @author angel
  */
-public class VentanaAgregarConfirmar extends javax.swing.JPanel {
+public class PanelNavegacion extends javax.swing.JPanel {
 
     private JFrame frame;
 
@@ -16,7 +16,7 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
      *
      * @param frame
      */
-    public VentanaAgregarConfirmar(JFrame frame) {
+    public PanelNavegacion(JFrame frame) {
         initComponents();
         this.frame = frame;
         optBloqueos.setVisible(false);
@@ -71,26 +71,11 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
         lblReporteBloqueos = new javax.swing.JLabel();
         btnReporteCentros = new presentacion_administrador.componentes.BotonNavegador();
         lblReportesCentros = new javax.swing.JLabel();
-        pnlBarraProceso = new presentacion_administrador.componentes.PanelRound();
-        pnlUno = new presentacion_administrador.componentes.PanelRound();
-        lblUno = new javax.swing.JLabel();
-        pnlDos = new presentacion_administrador.componentes.PanelRound();
-        lblDos = new javax.swing.JLabel();
-        pnlTres = new presentacion_administrador.componentes.PanelRound();
-        lblTres = new javax.swing.JLabel();
-        separadorUnoDos = new javax.swing.JPanel();
-        separadorDosTres = new javax.swing.JPanel();
-        pnlTituloOperacion = new presentacion_administrador.componentes.PanelRound();
-        lblTituloOperacion = new javax.swing.JLabel();
-        pnlContenidoOperacion = new presentacion_administrador.componentes.PanelRound();
-        lblCancelar = new javax.swing.JLabel();
-        botonCancelar = new presentacion_administrador.componentes.BotonCancelar();
-        lblContinuar = new javax.swing.JLabel();
-        botonContinuar = new presentacion_administrador.componentes.BotonSiguiente();
 
         setBackground(new java.awt.Color(16, 20, 65));
         setMinimumSize(new java.awt.Dimension(1440, 1024));
         setName(""); // NOI18N
+        setOpaque(false);
         setPreferredSize(new java.awt.Dimension(1440, 1024));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -114,9 +99,7 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
         btnComputadoras.setLayout(btnComputadorasLayout);
         btnComputadorasLayout.setHorizontalGroup(
             btnComputadorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnComputadorasLayout.createSequentialGroup()
-                .addComponent(lblComputadoras, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(lblComputadoras, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
         btnComputadorasLayout.setVerticalGroup(
             btnComputadorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,7 +194,7 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
         btnAgregarCompu.setBackground(new java.awt.Color(32, 39, 116));
         btnAgregarCompu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnAgregarCompuMouseClicked(evt);
+                btnAgregarCompuMouseClicked1(evt);
             }
         });
 
@@ -225,14 +208,14 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
         btnAgregarCompu.setLayout(btnAgregarCompuLayout);
         btnAgregarCompuLayout.setHorizontalGroup(
             btnAgregarCompuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblAgregarCompu, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+            .addComponent(lblAgregarCompu, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
         btnAgregarCompuLayout.setVerticalGroup(
             btnAgregarCompuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblAgregarCompu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        optComputadoras.add(btnAgregarCompu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 50));
+        optComputadoras.add(btnAgregarCompu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 50));
 
         btnEliminarCompu.setBackground(new java.awt.Color(32, 39, 116));
         btnEliminarCompu.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -251,14 +234,14 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
         btnEliminarCompu.setLayout(btnEliminarCompuLayout);
         btnEliminarCompuLayout.setHorizontalGroup(
             btnEliminarCompuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblEliminarCompu, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+            .addComponent(lblEliminarCompu, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
         btnEliminarCompuLayout.setVerticalGroup(
             btnEliminarCompuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblEliminarCompu, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        optComputadoras.add(btnEliminarCompu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 340, 50));
+        optComputadoras.add(btnEliminarCompu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 360, 50));
 
         btnListarCompu.setBackground(new java.awt.Color(32, 39, 116));
         btnListarCompu.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -277,16 +260,16 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
         btnListarCompu.setLayout(btnListarCompuLayout);
         btnListarCompuLayout.setHorizontalGroup(
             btnListarCompuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblListarCompu, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+            .addComponent(lblListarCompu, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
         btnListarCompuLayout.setVerticalGroup(
             btnListarCompuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblListarCompu, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        optComputadoras.add(btnListarCompu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 340, 40));
+        optComputadoras.add(btnListarCompu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 360, 40));
 
-        add(optComputadoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 850, 340, 160));
+        add(optComputadoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 360, 160));
 
         optBloqueos.setBackground(new java.awt.Color(32, 39, 116));
         optBloqueos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -308,14 +291,14 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
         btnBloquearAlumno.setLayout(btnBloquearAlumnoLayout);
         btnBloquearAlumnoLayout.setHorizontalGroup(
             btnBloquearAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblBloquearAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+            .addComponent(lblBloquearAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
         btnBloquearAlumnoLayout.setVerticalGroup(
             btnBloquearAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblBloquearAlumno, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        optBloqueos.add(btnBloquearAlumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 50));
+        optBloqueos.add(btnBloquearAlumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 50));
 
         btnDesbloquearAlumno.setBackground(new java.awt.Color(32, 39, 116));
         btnDesbloquearAlumno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -334,14 +317,14 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
         btnDesbloquearAlumno.setLayout(btnDesbloquearAlumnoLayout);
         btnDesbloquearAlumnoLayout.setHorizontalGroup(
             btnDesbloquearAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblDesbloquearAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+            .addComponent(lblDesbloquearAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
         btnDesbloquearAlumnoLayout.setVerticalGroup(
             btnDesbloquearAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblDesbloquearAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        optBloqueos.add(btnDesbloquearAlumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 340, 50));
+        optBloqueos.add(btnDesbloquearAlumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 360, 50));
 
         btnListarBloqueos.setBackground(new java.awt.Color(32, 39, 116));
         btnListarBloqueos.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -360,16 +343,16 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
         btnListarBloqueos.setLayout(btnListarBloqueosLayout);
         btnListarBloqueosLayout.setHorizontalGroup(
             btnListarBloqueosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(listarBloqueos, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+            .addComponent(listarBloqueos, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
         btnListarBloqueosLayout.setVerticalGroup(
             btnListarBloqueosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(listarBloqueos, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        optBloqueos.add(btnListarBloqueos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 340, 40));
+        optBloqueos.add(btnListarBloqueos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 360, 40));
 
-        add(optBloqueos, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 850, 340, 160));
+        add(optBloqueos, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 360, 160));
 
         optLaboratorios.setBackground(new java.awt.Color(32, 39, 116));
         optLaboratorios.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -391,14 +374,14 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
         btnAgregarLaboratorio.setLayout(btnAgregarLaboratorioLayout);
         btnAgregarLaboratorioLayout.setHorizontalGroup(
             btnAgregarLaboratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblAgregarLaboratorio, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+            .addComponent(lblAgregarLaboratorio, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
         btnAgregarLaboratorioLayout.setVerticalGroup(
             btnAgregarLaboratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblAgregarLaboratorio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        optLaboratorios.add(btnAgregarLaboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 50));
+        optLaboratorios.add(btnAgregarLaboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 50));
 
         btnModificarLaboratorio.setBackground(new java.awt.Color(32, 39, 116));
         btnModificarLaboratorio.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -417,14 +400,14 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
         btnModificarLaboratorio.setLayout(btnModificarLaboratorioLayout);
         btnModificarLaboratorioLayout.setHorizontalGroup(
             btnModificarLaboratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblModificarLaboratorio, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+            .addComponent(lblModificarLaboratorio, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
         btnModificarLaboratorioLayout.setVerticalGroup(
             btnModificarLaboratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblModificarLaboratorio, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        optLaboratorios.add(btnModificarLaboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 340, 50));
+        optLaboratorios.add(btnModificarLaboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 360, 50));
 
         btnListarLaboratorios.setBackground(new java.awt.Color(32, 39, 116));
         btnListarLaboratorios.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -443,16 +426,16 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
         btnListarLaboratorios.setLayout(btnListarLaboratoriosLayout);
         btnListarLaboratoriosLayout.setHorizontalGroup(
             btnListarLaboratoriosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(listarLaboratorios, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+            .addComponent(listarLaboratorios, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
         btnListarLaboratoriosLayout.setVerticalGroup(
             btnListarLaboratoriosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(listarLaboratorios, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        optLaboratorios.add(btnListarLaboratorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 340, 40));
+        optLaboratorios.add(btnListarLaboratorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 360, 40));
 
-        add(optLaboratorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 850, 340, 160));
+        add(optLaboratorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 360, 160));
 
         optReportes.setBackground(new java.awt.Color(32, 39, 116));
         optReportes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -474,14 +457,14 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
         btnReporteCarreras.setLayout(btnReporteCarrerasLayout);
         btnReporteCarrerasLayout.setHorizontalGroup(
             btnReporteCarrerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblReporteCarreras, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+            .addComponent(lblReporteCarreras, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
         btnReporteCarrerasLayout.setVerticalGroup(
             btnReporteCarrerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblReporteCarreras, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        optReportes.add(btnReporteCarreras, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 50));
+        optReportes.add(btnReporteCarreras, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 50));
 
         btnReporteBloqueos.setBackground(new java.awt.Color(32, 39, 116));
         btnReporteBloqueos.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -500,14 +483,14 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
         btnReporteBloqueos.setLayout(btnReporteBloqueosLayout);
         btnReporteBloqueosLayout.setHorizontalGroup(
             btnReporteBloqueosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblReporteBloqueos, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+            .addComponent(lblReporteBloqueos, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
         btnReporteBloqueosLayout.setVerticalGroup(
             btnReporteBloqueosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblReporteBloqueos, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        optReportes.add(btnReporteBloqueos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 340, 50));
+        optReportes.add(btnReporteBloqueos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 360, 50));
 
         btnReporteCentros.setBackground(new java.awt.Color(32, 39, 116));
         btnReporteCentros.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -526,252 +509,72 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
         btnReporteCentros.setLayout(btnReporteCentrosLayout);
         btnReporteCentrosLayout.setHorizontalGroup(
             btnReporteCentrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblReportesCentros, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+            .addComponent(lblReportesCentros, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
         btnReporteCentrosLayout.setVerticalGroup(
             btnReporteCentrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblReportesCentros, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        optReportes.add(btnReporteCentros, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 340, 40));
+        optReportes.add(btnReporteCentros, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 360, 40));
 
-        add(optReportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 850, 340, 160));
-
-        pnlBarraProceso.setBackground(new java.awt.Color(32, 39, 116));
-        pnlBarraProceso.setRoundTopLeft(15);
-        pnlBarraProceso.setRoundTopRight(15);
-        pnlBarraProceso.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        pnlUno.setBackground(new java.awt.Color(25, 50, 178));
-        pnlUno.setRoundBottomLeft(200);
-        pnlUno.setRoundBottomRight(200);
-        pnlUno.setRoundTopLeft(200);
-        pnlUno.setRoundTopRight(200);
-
-        lblUno.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblUno.setForeground(new java.awt.Color(255, 255, 255));
-        lblUno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblUno.setText("1");
-
-        javax.swing.GroupLayout pnlUnoLayout = new javax.swing.GroupLayout(pnlUno);
-        pnlUno.setLayout(pnlUnoLayout);
-        pnlUnoLayout.setHorizontalGroup(
-            pnlUnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblUno, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-        pnlUnoLayout.setVerticalGroup(
-            pnlUnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblUno, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        pnlBarraProceso.add(pnlUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 50, 50));
-
-        pnlDos.setBackground(new java.awt.Color(25, 50, 178));
-        pnlDos.setRoundBottomLeft(200);
-        pnlDos.setRoundBottomRight(200);
-        pnlDos.setRoundTopLeft(200);
-        pnlDos.setRoundTopRight(200);
-
-        lblDos.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblDos.setForeground(new java.awt.Color(255, 255, 255));
-        lblDos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblDos.setText("2");
-
-        javax.swing.GroupLayout pnlDosLayout = new javax.swing.GroupLayout(pnlDos);
-        pnlDos.setLayout(pnlDosLayout);
-        pnlDosLayout.setHorizontalGroup(
-            pnlDosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblDos, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-        pnlDosLayout.setVerticalGroup(
-            pnlDosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblDos, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        pnlBarraProceso.add(pnlDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 50, 50));
-
-        pnlTres.setBackground(new java.awt.Color(25, 50, 178));
-        pnlTres.setRoundBottomLeft(200);
-        pnlTres.setRoundBottomRight(200);
-        pnlTres.setRoundTopLeft(200);
-        pnlTres.setRoundTopRight(200);
-
-        lblTres.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblTres.setForeground(new java.awt.Color(255, 255, 255));
-        lblTres.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTres.setText("3");
-
-        javax.swing.GroupLayout pnlTresLayout = new javax.swing.GroupLayout(pnlTres);
-        pnlTres.setLayout(pnlTresLayout);
-        pnlTresLayout.setHorizontalGroup(
-            pnlTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblTres, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-        pnlTresLayout.setVerticalGroup(
-            pnlTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblTres, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        pnlBarraProceso.add(pnlTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 50, 50));
-
-        separadorUnoDos.setBackground(new java.awt.Color(16, 20, 65));
-
-        javax.swing.GroupLayout separadorUnoDosLayout = new javax.swing.GroupLayout(separadorUnoDos);
-        separadorUnoDos.setLayout(separadorUnoDosLayout);
-        separadorUnoDosLayout.setHorizontalGroup(
-            separadorUnoDosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
-        );
-        separadorUnoDosLayout.setVerticalGroup(
-            separadorUnoDosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 10, Short.MAX_VALUE)
-        );
-
-        pnlBarraProceso.add(separadorUnoDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 90, -1));
-
-        separadorDosTres.setBackground(new java.awt.Color(16, 20, 65));
-
-        javax.swing.GroupLayout separadorDosTresLayout = new javax.swing.GroupLayout(separadorDosTres);
-        separadorDosTres.setLayout(separadorDosTresLayout);
-        separadorDosTresLayout.setHorizontalGroup(
-            separadorDosTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
-        );
-        separadorDosTresLayout.setVerticalGroup(
-            separadorDosTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 10, Short.MAX_VALUE)
-        );
-
-        pnlBarraProceso.add(separadorDosTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 90, -1));
-
-        add(pnlBarraProceso, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 70, 330, 70));
-
-        pnlTituloOperacion.setBackground(new java.awt.Color(105, 111, 153));
-        pnlTituloOperacion.setRoundTopLeft(20);
-        pnlTituloOperacion.setRoundTopRight(20);
-
-        lblTituloOperacion.setFont(new java.awt.Font("Segoe UI", 0, 32)); // NOI18N
-        lblTituloOperacion.setForeground(new java.awt.Color(255, 255, 255));
-        lblTituloOperacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTituloOperacion.setText("confirmar seleccion");
-        lblTituloOperacion.setToolTipText("");
-        lblTituloOperacion.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-
-        javax.swing.GroupLayout pnlTituloOperacionLayout = new javax.swing.GroupLayout(pnlTituloOperacion);
-        pnlTituloOperacion.setLayout(pnlTituloOperacionLayout);
-        pnlTituloOperacionLayout.setHorizontalGroup(
-            pnlTituloOperacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblTituloOperacion, javax.swing.GroupLayout.DEFAULT_SIZE, 620, Short.MAX_VALUE)
-        );
-        pnlTituloOperacionLayout.setVerticalGroup(
-            pnlTituloOperacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblTituloOperacion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        add(pnlTituloOperacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 620, 50));
-
-        pnlContenidoOperacion.setBackground(new java.awt.Color(25, 30, 69));
-        pnlContenidoOperacion.setRoundBottomLeft(20);
-        pnlContenidoOperacion.setRoundBottomRight(20);
-
-        javax.swing.GroupLayout pnlContenidoOperacionLayout = new javax.swing.GroupLayout(pnlContenidoOperacion);
-        pnlContenidoOperacion.setLayout(pnlContenidoOperacionLayout);
-        pnlContenidoOperacionLayout.setHorizontalGroup(
-            pnlContenidoOperacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1310, Short.MAX_VALUE)
-        );
-        pnlContenidoOperacionLayout.setVerticalGroup(
-            pnlContenidoOperacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 670, Short.MAX_VALUE)
-        );
-
-        add(pnlContenidoOperacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 1310, 670));
-
-        lblCancelar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lblCancelar.setForeground(new java.awt.Color(255, 255, 255));
-        lblCancelar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblCancelar.setText("cancelar");
-        lblCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblCancelarMouseClicked(evt);
-            }
-        });
-        add(lblCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 910, 330, 50));
-
-        botonCancelar.setBackground(new java.awt.Color(212, 82, 82));
-        add(botonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 910, 330, 50));
-
-        lblContinuar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lblContinuar.setForeground(new java.awt.Color(255, 255, 255));
-        lblContinuar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblContinuar.setText("continuar");
-        lblContinuar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        add(lblContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 910, 320, 50));
-
-        botonContinuar.setBackground(new java.awt.Color(25, 50, 178));
-        botonContinuar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botonContinuarMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout botonContinuarLayout = new javax.swing.GroupLayout(botonContinuar);
-        botonContinuar.setLayout(botonContinuarLayout);
-        botonContinuarLayout.setHorizontalGroup(
-            botonContinuarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 320, Short.MAX_VALUE)
-        );
-        botonContinuarLayout.setVerticalGroup(
-            botonContinuarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        add(botonContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 910, 320, 50));
+        add(optReportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 50, 360, 160));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnComputadorasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnComputadorasMouseClicked
-        // TODO add your handling code here:
         SwingUtilities.invokeLater(() -> {
             optComputadoras.setVisible(!optComputadoras.isVisible());
+            optBloqueos.setVisible(false);
+            optLaboratorios.setVisible(false);
+            optReportes.setVisible(false);
         });
     }//GEN-LAST:event_btnComputadorasMouseClicked
 
     private void btnBloqueosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBloqueosMouseClicked
-        // TODO add your handling code here:
         SwingUtilities.invokeLater(() -> {
             optBloqueos.setVisible(!optBloqueos.isVisible());
+            optComputadoras.setVisible(false);
+            optLaboratorios.setVisible(false);
+            optReportes.setVisible(false);
         });
     }//GEN-LAST:event_btnBloqueosMouseClicked
 
     private void btnLaboratoriosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLaboratoriosMouseClicked
-        // TODO add your handling code here:
         SwingUtilities.invokeLater(() -> {
             optLaboratorios.setVisible(!optLaboratorios.isVisible());
+            optComputadoras.setVisible(false);
+            optBloqueos.setVisible(false);
+            optReportes.setVisible(false);
         });
     }//GEN-LAST:event_btnLaboratoriosMouseClicked
 
     private void btnReportesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReportesMouseClicked
-        // TODO add your handling code here:
         SwingUtilities.invokeLater(() -> {
             optReportes.setVisible(!optReportes.isVisible());
+            optComputadoras.setVisible(false);
+            optBloqueos.setVisible(false);
+            optLaboratorios.setVisible(false);
         });
     }//GEN-LAST:event_btnReportesMouseClicked
 
     
-    //opociones computadoras
+    //Opciones de Computadoras
+    private void btnAgregarCompuMouseClicked1(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarCompuMouseClicked1
+        presentacion_administrador.Controlador.mostrarVentanaComputadoraAgrega(frame);
+    }//GEN-LAST:event_btnAgregarCompuMouseClicked1
+
     private void btnEliminarCompuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarCompuMouseClicked
-        // TODO add your handling code here:
+        // pendiente en el figma
     }//GEN-LAST:event_btnEliminarCompuMouseClicked
 
     private void btnListarCompuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListarCompuMouseClicked
-        // TODO add your handling code here:
+        // pendiente en el figma
     }//GEN-LAST:event_btnListarCompuMouseClicked
 
     
-    //opociones bloqueos
+    //Opciones de Bloqueos
     private void btnBloquearAlumnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBloquearAlumnoMouseClicked
-        // TODO add your handling code here:
+        presentacion_administrador.Controlador.mostrarVentanaBloqueoAgrega(frame);
     }//GEN-LAST:event_btnBloquearAlumnoMouseClicked
 
     private void btnDesbloquearAlumnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDesbloquearAlumnoMouseClicked
@@ -779,13 +582,13 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
     }//GEN-LAST:event_btnDesbloquearAlumnoMouseClicked
 
     private void btnListarBloqueosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListarBloqueosMouseClicked
-        // TODO add your handling code here:
+        // pendiente en el figma
     }//GEN-LAST:event_btnListarBloqueosMouseClicked
 
     
-    //opciones laboratorio
+    //Opciones de Laboratorios
     private void btnAgregarLaboratorioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarLaboratorioMouseClicked
-        // TODO add your handling code here:
+        presentacion_administrador.Controlador.mostrarVentanaLaboratorioAgrega(frame);
     }//GEN-LAST:event_btnAgregarLaboratorioMouseClicked
 
     private void btnModificarLaboratorioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnModificarLaboratorioMouseClicked
@@ -797,7 +600,7 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
     }//GEN-LAST:event_btnListarLaboratoriosMouseClicked
 
     
-    //opciones reportes
+    //Opciones de Reportes
     private void btnReporteCarrerasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReporteCarrerasMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_btnReporteCarrerasMouseClicked
@@ -811,28 +614,8 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
     }//GEN-LAST:event_btnReporteCentrosMouseClicked
 
     
-    //opciones de navegacion
-    private void lblCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCancelarMouseClicked
-        // TODO add your handling code here:
-        presentacion_administrador.Controlador.mostrarVentanaAgregarProgramas(frame);
-    }//GEN-LAST:event_lblCancelarMouseClicked
-
-    private void btnAgregarCompuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarCompuMouseClicked
-        // TODO add your handling code here:
-        presentacion_administrador.Controlador.mostrarVentanaAgregarComputadora(frame);
-    }//GEN-LAST:event_btnAgregarCompuMouseClicked
-
-    private void botonContinuarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonContinuarMouseClicked
-        // TODO add your handling code here:
-        //logica para ejecutar el proceso
-        //y regresar al menu
-        presentacion_administrador.Controlador.mostrarVentanaInicio(frame);
-    }//GEN-LAST:event_botonContinuarMouseClicked
-
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private presentacion_administrador.componentes.BotonCancelar botonCancelar;
-    private presentacion_administrador.componentes.BotonSiguiente botonContinuar;
     private javax.swing.JPanel btnAgregarCompu;
     private javax.swing.JPanel btnAgregarLaboratorio;
     private javax.swing.JPanel btnBloquearAlumno;
@@ -853,11 +636,8 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
     private javax.swing.JLabel lblAgregarLaboratorio;
     private javax.swing.JLabel lblAlumnos;
     private javax.swing.JLabel lblBloquearAlumno;
-    private javax.swing.JLabel lblCancelar;
     private javax.swing.JLabel lblComputadoras;
-    private javax.swing.JLabel lblContinuar;
     private javax.swing.JLabel lblDesbloquearAlumno;
-    private javax.swing.JLabel lblDos;
     private javax.swing.JLabel lblEliminarCompu;
     private javax.swing.JLabel lblLaboratorios;
     private javax.swing.JLabel lblListarCompu;
@@ -866,23 +646,12 @@ public class VentanaAgregarConfirmar extends javax.swing.JPanel {
     private javax.swing.JLabel lblReporteCarreras;
     private javax.swing.JLabel lblReportes;
     private javax.swing.JLabel lblReportesCentros;
-    private javax.swing.JLabel lblTituloOperacion;
-    private javax.swing.JLabel lblTres;
-    private javax.swing.JLabel lblUno;
     private javax.swing.JLabel listarBloqueos;
     private javax.swing.JLabel listarLaboratorios;
     private javax.swing.JPanel optBloqueos;
     private javax.swing.JPanel optComputadoras;
     private javax.swing.JPanel optLaboratorios;
     private javax.swing.JPanel optReportes;
-    private presentacion_administrador.componentes.PanelRound pnlBarraProceso;
-    private presentacion_administrador.componentes.PanelRound pnlContenidoOperacion;
-    private presentacion_administrador.componentes.PanelRound pnlDos;
     private javax.swing.JPanel pnlNavegacion;
-    private presentacion_administrador.componentes.PanelRound pnlTituloOperacion;
-    private presentacion_administrador.componentes.PanelRound pnlTres;
-    private presentacion_administrador.componentes.PanelRound pnlUno;
-    private javax.swing.JPanel separadorDosTres;
-    private javax.swing.JPanel separadorUnoDos;
     // End of variables declaration//GEN-END:variables
 }
