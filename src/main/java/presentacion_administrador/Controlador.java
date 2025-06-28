@@ -1,8 +1,11 @@
 package presentacion_administrador;
 
+import presentacion_administrador.vistas.computadoras.agregar_computadora.VentanaAgregarConfirmar;
+import presentacion_administrador.vistas.computadoras.agregar_computadora.VentanaAgregarProgramas;
+import presentacion_administrador.vistas.computadoras.agregar_computadora.VentanaAgregarComputadora;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
-import presentacion_administrador.vistas.VentanaInicio;
+import presentacion_administrador.vistas.*;
 
 /**
  * clase que controla las ventanas del admin
@@ -34,6 +37,10 @@ public class Controlador extends JFrame {
         setResizable(false);
     }
 
+    /**
+     * ventana que permite volver al menu inicial
+     * @param frame 
+     */
     public static void mostrarVentanaInicio(JFrame frame) {
         SwingUtilities.invokeLater(() -> {
             VentanaInicio ventana = new VentanaInicio(frame);
@@ -41,4 +48,39 @@ public class Controlador extends JFrame {
             frame.revalidate();
         });
     }
+
+    /**
+     * ventana que permite iniciar el proceso de agregar una computadora
+     * @param frame 
+     */
+    public static void mostrarVentanaAgregarComputadora(JFrame frame) {
+        SwingUtilities.invokeLater(() -> {
+            VentanaAgregarComputadora ventana = new VentanaAgregarComputadora(frame);
+            frame.setContentPane(ventana);
+            frame.revalidate();
+        });
+    }
+    /**
+     * ventana que permite continuar el proceso de agregar una computadora
+     * @param frame 
+     */
+    public static void mostrarVentanaAgregarProgramas(JFrame frame) {
+        SwingUtilities.invokeLater(() -> {
+            VentanaAgregarProgramas ventana = new VentanaAgregarProgramas(frame);
+            frame.setContentPane(ventana);
+            frame.revalidate();
+        });
+    }
+    /**
+     * ventana que permite continuar el proceso de agregar una computadora
+     * @param frame 
+     */
+    public static void mostrarVentanaAgregarConfirmacion(JFrame frame) {
+        SwingUtilities.invokeLater(() -> {
+            VentanaAgregarConfirmar ventana = new VentanaAgregarConfirmar(frame);
+            frame.setContentPane(ventana);
+            frame.revalidate();
+        });
+    }
+    
 }
