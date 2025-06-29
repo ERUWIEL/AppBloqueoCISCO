@@ -11,6 +11,7 @@ import presentacion_administrador.vistas.bloqueos.listar_bloqueo.VentanaBloqueoL
 import presentacion_administrador.vistas.bloqueos.quitar_bloqueo.VentanaBloqueoQuita;
 import presentacion_administrador.vistas.computadoras.listar_computadora.VentanaComputadoraLista;
 import presentacion_administrador.vistas.computadoras.quitar_computadora.VentanaComputadoraQuita;
+import presentacion_administrador.vistas.reportes.reporte_bloqueados.VentanaReporteBloqueo;
 
 /**
  * clase que controla las ventanas del admin
@@ -68,7 +69,7 @@ public class Controlador extends JFrame {
             frame.revalidate();
         });
     }
-    
+
     /**
      * ventana que permite iniciar el proceso de quitar una computadora
      *
@@ -81,7 +82,7 @@ public class Controlador extends JFrame {
             frame.revalidate();
         });
     }
-    
+
     /**
      * ventana que permite iniciar el proceso de listar una computadora
      *
@@ -94,8 +95,7 @@ public class Controlador extends JFrame {
             frame.revalidate();
         });
     }
-    
-    
+
     //Ventanas de Laboratorios
     /**
      * ventana que permite iniciar el proceso de agregar un laboratorio
@@ -123,7 +123,7 @@ public class Controlador extends JFrame {
             frame.revalidate();
         });
     }
-    
+
     /**
      * ventana que permite iniciar el proceso de quitar un bloqueo
      *
@@ -136,7 +136,7 @@ public class Controlador extends JFrame {
             frame.revalidate();
         });
     }
-    
+
     /**
      * ventana que permite iniciar el proceso de listar un bloqueo
      *
@@ -149,7 +149,19 @@ public class Controlador extends JFrame {
             frame.revalidate();
         });
     }
-    
-    
-    
+
+    //ventanas de reportes
+    /**
+     * ventana que permite iniciar el proceso de generar un reporte bloqueo
+     *
+     * @param frame
+     */
+    public static void mostrarVentanaReporteBloqueo(JFrame frame) {
+        SwingUtilities.invokeLater(() -> {
+            VentanaReporteBloqueo ventana = new VentanaReporteBloqueo(frame);
+            frame.setContentPane(ventana);
+            frame.revalidate();
+        });
+    }
+
 }

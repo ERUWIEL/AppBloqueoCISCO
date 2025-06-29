@@ -8,7 +8,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>23</maven.compiler.release>
-        <exec.mainClass>presentacion_bloqueo.Controlador</exec.mainClass>
+        <exec.mainClass>presentacion_administrador.Controlador</exec.mainClass>
     </properties>
     <dependencies>
         <dependency>
@@ -20,21 +20,6 @@
             <groupId>com.github.lgooddatepicker</groupId>
             <artifactId>LGoodDatePicker</artifactId>
             <version>11.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.luishonshon</groupId>
-            <artifactId>SistemaCISCODominio</artifactId>
-            <version>6579de3fe1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.luishonshon</groupId>
-            <artifactId>SistemaCISCOPersistencia</artifactId>
-            <version>-94ced22e66-1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.luishonshon</groupId>
-            <artifactId>SistemaCISCONegocio</artifactId>
-            <version>0b4b927ce2</version>
         </dependency>
     </dependencies>
 </project>

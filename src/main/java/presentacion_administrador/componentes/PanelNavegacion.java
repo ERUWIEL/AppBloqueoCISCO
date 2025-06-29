@@ -23,6 +23,14 @@ public class PanelNavegacion extends javax.swing.JPanel {
         optComputadoras.setVisible(false);
         optLaboratorios.setVisible(false);
         optReportes.setVisible(false);
+        
+        //opciones deshabilitadas
+        btnEliminarCompu.setVisible(false);
+        btnListarCompu.setVisible(false);
+        btnListarBloqueos.setVisible(false);
+        btnModificarLaboratorio.setVisible(false);
+        btnListarLaboratorios.setVisible(false);
+        
     }
 
     /**
@@ -608,7 +616,7 @@ public class PanelNavegacion extends javax.swing.JPanel {
     }//GEN-LAST:event_btnReporteCarrerasMouseClicked
 
     private void btnReporteBloqueosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReporteBloqueosMouseClicked
-        // TODO add your handling code here:
+        presentacion_administrador.Controlador.mostrarVentanaReporteBloqueo(frame);
     }//GEN-LAST:event_btnReporteBloqueosMouseClicked
 
     private void btnReporteCentrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReporteCentrosMouseClicked
